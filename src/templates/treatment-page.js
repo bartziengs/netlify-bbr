@@ -7,7 +7,7 @@ import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const ProductPageTemplate = ({
+export const TreatmentPageTemplate = ({
   image,
   title,
   heading,
@@ -104,7 +104,7 @@ export const ProductPageTemplate = ({
   </div>
 )
 
-ProductPageTemplate.propTypes = {
+TreatmentPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -133,7 +133,7 @@ const ProductPage = ({ data }) => {
 
   return (
     <Layout>
-      <ProductPageTemplate
+      <TreatmentPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -158,8 +158,8 @@ ProductPage.propTypes = {
 
 export default ProductPage
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const treatmentPageQuery = graphql`
+  query TreatmentPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -174,7 +174,6 @@ export const productPageQuery = graphql`
         description
         intro {
           blurbs {
-            product_title
             image {
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {
