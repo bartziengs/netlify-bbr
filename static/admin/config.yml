@@ -13,8 +13,8 @@ public_folder: /img
 
 collections:
   - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+    label: "Niews"
+    folder: "src/pages/niews"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -50,8 +50,8 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
+      - file: "src/pages/producten/index.md"
+        label: "Producten"
         name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
