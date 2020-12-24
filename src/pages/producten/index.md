@@ -2,7 +2,7 @@
 templateKey: 'product-page'
 path: /producten
 title: Producten
-image: /img/jumbotron.jpg
+image: /img/bbr7.jpg
 payot:
   products:
     - image: /img/payot1.png
@@ -58,7 +58,7 @@ testimonials:
   - author: Philipp Trommler
     quote: Kaldi is the place to go if you want the best quality coffee. I love
       their stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
+full_image: /img/bbr6.jpg
 pricing:
   heading: Monthly subscriptions
   description: We make it easy to make great coffee a part of your life. Choose

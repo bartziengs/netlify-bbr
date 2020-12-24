@@ -25,6 +25,7 @@ export const TreatmentPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
+        backgroundPosition: 'right center'
       }}
     >
       <h2
