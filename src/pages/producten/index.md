@@ -3,49 +3,38 @@ templateKey: 'product-page'
 path: /producten
 title: Producten
 image: /img/jumbotron.jpg
-heading: Great coffee with a conscience
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
-intro:
-  blurbs:
+payot:
+  products:
     - image: /img/payot1.png
       product_title: PÂTE GRISE voor de gecombineerde tot vette huid
       text: >
         De combinatie van de expertise uit de medische wereld met de sensorialiteit van cosmetica. 
         Zuivert, diep-reinigt en herstelt de huidbalans in de strijd tegen het ontstaan van onzuiverheden,
          vernauwde poriën, matteert en verfijnt de huidstructuur.
-    - image: /img/coffee-gear.png
-      product_title: PÂTE GRISE voor de gecombineerde tot vette huid
+    - image: /img/payot2.png
+      product_title: HYDRA 24 voor de vochtarme huid
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      product_title: PÂTE GRISE voor de gecombineerde tot vette huid
+        Hydra 24+ doet meer voor de huid dan alleen hydrateren, ze behoudt haar jeugdigheid en versterkt de weerstand. De huid is gehydrateerd, voelt fris aan, stralend. Rimpels en fijne lijntjes zijn vervaagd. Het zorgt voor een uitgeruste uitstraling. 24 uur effect met direct comfort!
+    - image: /img/payot3.png
+      product_title: CREME nr. 2  voor de gevoelige- en reactieve huid
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      product_title: PÂTE GRISE voor de gecombineerde tot vette huid
+        Crème nr. 2 is het antwoord bij irritaties, droogte, roodheid, trekkerigheid enz. Vermindert een oncomfortabel gevoel en ontstekingsreacties. Beschermt en versterkt de huid tegen invloeden van buitenaf
+    - image: /img/payot4.png
+      product_title: MY PAYOT voor alle huidtypes
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: What we offer
+        My Payot revitaliseert, beschermt en hydrateert de huid. Het bevat superfruit dat de oppervlakte beschermt en laat stralen. Frisse energieke uitstraling, mooie gezonde gloed, optimaal beschermend. Rijk aan vitamines en mineralen. De huidstructuur verbetert en het zelfherstellend vermogen van de huid wordt gestimuleerd.
+    - image: /img/payot5.png
+      product_title: TECHNI LISS voor de rijpere huid
+      text: >
+        Vermindert alle soorten rimpels, voorkomt het verschijnen van de eerste rimpels en verzacht diepe rimpels. Stimuleert de cel vernieuwing en egaliseert de uitstraling.
+    - image: /img/payot6.png
+      product_title: OPTIMALE  mannenlijn
+      text: >
+        Deze herenlijn kalmeert huidirritaties en voorkomt het ingroeien van baard haartjes. Reinigt de huid en verwijdert onzuiverheden. Het verfrist en geeft energie. Het verstevigt, beschermt en verzacht.      
+    
+  heading: Huidverzorgingslijn van Payot
   description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+    Onderstaande producten zijn te koop in mijn salon
 main:
   heading: Great coffee with no compromises
   description: >

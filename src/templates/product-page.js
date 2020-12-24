@@ -10,9 +10,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 export const ProductPageTemplate = ({
   image,
   title,
-  heading,
-  description,
-  intro,
+  payot,
   main,
   testimonials,
   fullImage,
@@ -43,14 +41,10 @@ export const ProductPageTemplate = ({
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p>{description}</p>
-            </div>
-          </div>
-          <div className="columns">
             <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
+            <h3 className="has-text-weight-semibold is-size-2">{payot.heading}</h3>
+              <p>{payot.description}</p>
+              <Features gridItems={payot.products} />
               <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
@@ -107,10 +101,10 @@ export const ProductPageTemplate = ({
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+  // heading: PropTypes.string,
+  // description: PropTypes.string,
+  payot: PropTypes.shape({
+    products: PropTypes.array,
   }),
   main: PropTypes.shape({
     heading: PropTypes.string,
@@ -136,9 +130,9 @@ const ProductPage = ({ data }) => {
       <ProductPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        // heading={frontmatter.heading}
+        // description={frontmatter.description}
+        payot={frontmatter.payot}
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
@@ -170,10 +164,8 @@ export const productPageQuery = graphql`
             }
           }
         }
-        heading
-        description
-        intro {
-          blurbs {
+        payot {
+          products {
             product_title
             image {
               childImageSharp {
