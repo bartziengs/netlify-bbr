@@ -1,19 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
+  main,
   subheading,
-  mainpitch,
+  // mainpitch,
+  selling_points,
   description,
-  intro,
+  // intro,
 }) => (
   <div>
     <div
@@ -27,23 +28,23 @@ export const IndexPageTemplate = ({
     >
       <div
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          display: "flex",
+          height: "150px",
+          lineHeight: "1",
+          justifyContent: "space-around",
+          alignItems: "left",
+          flexDirection: "column",
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen header-home page-title"
+          className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen header-home page-title"
           style={{
             // boxShadow:
             //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
             // backgroundColor: 'rgb(74, 68, 68)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em",
           }}
         >
           {title}
@@ -54,9 +55,9 @@ export const IndexPageTemplate = ({
             // boxShadow:
             //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
             // backgroundColor: 'rgb(74, 68, 68)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em",
           }}
         >
           {subheading}
@@ -68,7 +69,7 @@ export const IndexPageTemplate = ({
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="content">
+              {/* <div className="content">
                 <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
@@ -76,57 +77,112 @@ export const IndexPageTemplate = ({
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
+                </div> */}
+              <div className="columns">
+                <div className="column is-12">
+                  <p className="is-size-5">{description}</p>
                 </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
+              </div>
+              {/* <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
                       See all products
                     </Link>
                   </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                </div> */}
+              <div className="columns">
+                <div className="column is-7">
+                  <h3 className="has-text-weight-semibold is-size-3">
+                    {selling_points.title}
                   </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
+                  {/* list */}
+                  <ul style={{listStyle: "inside",
+                  paddingLeft: "0.5rem"
+                }}>
+                    {selling_points.points.map((item) => (
+                      <li key={item.text}
+                      style={{paddingBottom: "0.3rem"}}>
+                        {item.text}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="columns">
+                <div className="column is-7">
+                  <h3 className="has-text-weight-semibold is-size-3">
+                    {main.heading}
+                  </h3>
+                  {/* <p>{main.description}</p> */}
+                </div>
+              </div>
+              <div className="tile is-ancestor">
+                <div className="tile is-vertical">
+                  <div className="tile">
+                    <div className="tile is-parent is-vertical">
+                      <article className="tile is-child">
+                        <PreviewCompatibleImage imageInfo={main.image1} />
+                      </article>
+                    </div>
+                    <div className="tile is-parent">
+                      <article className="tile is-child">
+                        <PreviewCompatibleImage imageInfo={main.image2} />
+                      </article>
+                    </div>
                   </div>
+                  <div className="tile is-parent">
+                    <article className="tile is-child">
+                      <PreviewCompatibleImage imageInfo={main.image3} />
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div className="column is-12">
+                <h3 className="has-text-weight-semibold is-size-2">
+                  Laatste nieuws
+                </h3>
+                <BlogRoll />
+                <div className="column is-12 has-text-centered">
+                  <Link className="btn" to="/blog">
+                    Lees meer
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* </div> */}
     </section>
   </div>
-)
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
+  // heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  // mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+  selling_points: PropTypes.shape({
+    title: PropTypes.string,
+    products: PropTypes.array,
   }),
-}
+  main: PropTypes.shape({
+    heading: PropTypes.string,
+    description: PropTypes.string,
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  }),
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  // }),
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -135,13 +191,15 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
+        // mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        selling_points={frontmatter.selling_points}
+        main={frontmatter.main}
+        // intro={frontmatter.intro}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -149,9 +207,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -165,28 +223,54 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
         subheading
-        mainpitch {
-          title
-          description
-        }
         description
-        intro {
-          blurbs {
+        selling_points {
+          title
+          points {
+            text
+          }
+        }
+        selling_points {
+          title
+          points {
+            text
+          }
+        }
+        main {
+          heading
+          image1 {
+            alt
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-            text
           }
-          heading
-          description
+          image2 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image3 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }
   }
-`
+`;

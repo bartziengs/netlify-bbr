@@ -16,10 +16,11 @@ export default class BlogIndexPage extends React.Component {
       
         >
           <h1
-            className="has-text-weight-bold is-size-1 page-title"
+            className="has-text-weight-bold has-text-centered is-size-2-widescreen is-size-3-mobile is-size-2-tablet page-title header-home"
             style={{
               color: 'white',
               padding: '1rem',
+              textTransform: 'uppercase'
             }}
           >
             Het laatste nieuws

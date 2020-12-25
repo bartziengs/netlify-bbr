@@ -1,22 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
+import Pricing from "../components/Pricing";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const TreatmentPageTemplate = ({
   image,
   title,
-  heading,
-  description,
-  intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
+  facial,
+  other,
+  hairremoval,
+  single,
 }) => (
   <div className="content">
     <div
@@ -25,14 +22,15 @@ export const TreatmentPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: 'right center'
+        backgroundPosition: "right center",
       }}
     >
       <h2
-        className="has-text-weight-bold is-size-1 page-title"
+        className="has-text-weight-bold is-size-1 is-size-3-mobile is-size-3-tablet  page-title header-home"
         style={{
-          color: 'white',
-          padding: '1rem',
+          color: "white",
+          padding: "1rem",
+          textTransform: "uppercase",
         }}
       >
         {title}
@@ -42,110 +40,77 @@ export const TreatmentPageTemplate = ({
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p>{description}</p>
+            <div className="column is-10 is-offset-1">
+              <h3 className="has-text-weight-semibold is-size-2 mb-0"
+              style={{
+                marginBottom:0,
+        }}>
+                {facial.title}
+                        </h3>
             </div>
           </div>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
+        </div>
+        <div className="column is-10 is-offset-1">
+          <div className="columns is-multiline">
+            {facial.treatments.map((treatment) => (
+              <div key={treatment.description} className="column is-6">
+                
+                  <article className="message">
+                    <div className="message-header">
+                      <p>{treatment.title}</p>
                     </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
+                    <div className="message-body">
+                      <p className="my-0">
+                        <span className="has-text-weight-bold">Prijs: </span>€
+                        {treatment.price},-
+                      </p>
+                      <p className="my-0">
+                        <span className="has-text-weight-bold">Duur: </span>€
+                        {treatment.duration} min
+                      </p>
+                      <div className="mt-1">{treatment.description}</div>
                     </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
+                  </article>
               </div>
-              <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   </div>
-)
+);
 
 TreatmentPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+  facial: PropTypes.shape({
+    title: PropTypes.string,
+    treatments: PropTypes.array,
   }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  other: PropTypes.shape({
+    title: PropTypes.string,
+    treatments: PropTypes.array,
   }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
-}
+  hairremoval: PropTypes.array,
+  single: PropTypes.array,
+};
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <TreatmentPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
+        facial={frontmatter.facial}
+        other={frontmatter.other}
+        hairremoval={frontmatter.hairremoval}
+        single={frontmatter.single}
       />
     </Layout>
-  )
-}
+  );
+};
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
@@ -153,9 +118,9 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default ProductPage
+export default ProductPage;
 
 export const treatmentPageQuery = graphql`
   query TreatmentPage($id: String!) {
@@ -169,78 +134,29 @@ export const treatmentPageQuery = graphql`
             }
           }
         }
-        heading
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
+        facial {
+          title
+          treatments {
+            title
             price
+            duration
+            description
           }
+        }
+        other {
+          title
+          treatments {
+            title
+            price
+            duration
+            description
+          }
+        }
+        hairremoval {
+          description
+          price
         }
       }
     }
   }
-`
+`;

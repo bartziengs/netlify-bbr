@@ -23,10 +23,11 @@ export const ProductPageTemplate = ({
       }}
     >
       <h2
-        className="has-text-weight-bold is-size-1 page-title"
+        className="is-size-1 is-size-3-mobile is-size-3-tablet page-title header-home"
         style={{
           color: "white",
           padding: "1rem",
+          textTransform: 'uppercase'
         }}
       >
         {title}
