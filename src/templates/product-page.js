@@ -1,18 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Pricing from '../components/Pricing'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import Pricing from "../components/Pricing";
 
 export const ProductPageTemplate = ({
   image,
   title,
   payot,
-  main,
-  testimonials,
   fullImage,
-  pricing,
+  other,
 }) => (
   <div className="content">
     <div
@@ -21,16 +19,14 @@ export const ProductPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: 'center center'
+        backgroundPosition: "center center",
       }}
     >
       <h2
-        className="has-text-weight-bold is-size-1"
+        className="has-text-weight-bold is-size-1 page-title"
         style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
-          color: 'white',
-          padding: '1rem',
+          color: "white",
+          padding: "1rem",
         }}
       >
         {title}
@@ -38,38 +34,48 @@ export const ProductPageTemplate = ({
     </div>
     <section className="section section--gradient">
       <div className="container">
+        {/* Payot */}
         <div className="section">
           <div className="columns">
-            {/* Payot */}
             <div className="column is-10 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{payot.heading}</h3>
+              <h3 className="has-text-weight-semibold is-size-2">
+                {payot.heading}
+              </h3>
               <p>{payot.description}</p>
               <Features gridItems={payot.products} />
             </div>
-            </div>
-            </div>
+          </div>
+        </div>
 
-            {/* baackground img */}
-              <div
-                className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                  backgroundPositionY: '65%',
-                }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
+        {/* baackground img */}
+        <div
+          className="full-width-image-container"
+          style={{
+            backgroundImage: `url(${
+              fullImage.childImageSharp
+                ? fullImage.childImageSharp.fluid.src
+                : fullImage
+            })`,
+            backgroundPositionY: "65%",
+          }}
+        />
+
+        {/* Other */}
+        <div className="section">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <h3 className="has-text-weight-semibold is-size-2">
+                {other.heading}
+              </h3>
+              <p>{other.description}</p>
+              <Features gridItems={other.products} />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
-)
+);
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -79,34 +85,27 @@ ProductPageTemplate.propTypes = {
   payot: PropTypes.shape({
     products: PropTypes.array,
   }),
-
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
+  other: PropTypes.shape({
+    products: PropTypes.array,
   }),
-}
+};
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <ProductPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        // heading={frontmatter.heading}
-        // description={frontmatter.description}
         payot={frontmatter.payot}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
+        other={frontmatter.other}
       />
     </Layout>
-  )
-}
+  );
+};
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
@@ -114,9 +113,9 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default ProductPage
+export default ProductPage;
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
@@ -152,17 +151,22 @@ export const productPageQuery = graphql`
             }
           }
         }
-        pricing {
+        other {
+          products {
+            product_title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            text
+          }
           heading
           description
-          plans {
-            description
-            items
-            plan
-            price
-          }
         }
       }
     }
   }
-`
+`;

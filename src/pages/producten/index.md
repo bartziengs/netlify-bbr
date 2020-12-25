@@ -34,56 +34,25 @@ payot:
     
   heading: Huidverzorgingslijn van Payot
   description: >
-    Onderstaande producten zijn te koop in mijn salon
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
-testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: Kaldi is the place to go if you want the best quality coffee. I love
-      their stance on empowering farmers and transparency.
+    Onderstaande Payot producten zijn te koop in mijn salon
 full_image: /img/bbr6.jpg
-pricing:
-  heading: Monthly subscriptions
-  description: We make it easy to make great coffee a part of your life. Choose
-    one of our monthly subscription plans to receive great coffee at your
-    doorstep each month. Contact us about more details and payment info.
-  plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
-      items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: "50"
-    - description: Great for avid drinkers, java-loving couples and bigger crowds
-      items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: "80"
-    - description: Want a few tiny batches from different varieties? Try our custom plan
-      items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: ??
+other:
+  products:
+    - image: /img/other1.jpg
+      product_title: Marc Inbane
+      text: >
+        Natural Tanning van Marc Inbane. The award winnaar. Zorgt voor een zomerse teint, werkt snel en is gemakkelijk aan te brengen met de Marc Inbane kwast of de fluwelen handschoen.  Zorgt voor een natuurlijke gebruinde huid. Geschikt voor alle huidtype en huidtinten, droogt snel en plakt niet. Veilige manier van zonnen zonder schadelijke UV stralen. Verkrijgbaar in een spray, mousse of druppels welke je vermengt met je dagcrème.
+    - image: /img/other2.jpg
+      product_title: Cadeaubonnen
+      text: >
+        Een cadeaubon maakt elke persoon gelukkig . De cadeaubon is zelf samen te stellen en bestaat uit een of meerdere behandelingen of uit een geldbedrag.  De cadeaubon wordt feestelijk ingepakt.  Bezoek onze salon om een bon te kopen.
+    - image: /img/other3.jpg
+      product_title: Bolero Cosmetics
+      text: >
+        Natuurlijk bruin het hele jaar door!  
+        U kunt met de Bolero poeder gewoon in de zon zitten. De transparante poeder laat de zon door. De poriën worden niet afgesloten dus de huid kan gewoon ademen. U krijgt geen vlekkerige make up als u transpireert. Bolero is te gebruiken voor het hele lichaam, vanzelfsprekend uw gezicht maar ook voor armen, benen en het decolleté.
+        Het bijzondere aan de bronzing is de veeg-vrije formule die ervoor zorgt dat de bronzing poeder de gehele dag mooi blijft zitten op zowel gezicht als lichaam. Het resultaat? Een stralende sunkissed skin die een lichte dekking biedt maar de poriën niet doet verstoppen. 
+  heading: Overige Assortiment
+  description: >
+    Naast payot, vindt u onderstaande producten in mijn salon
 ---
