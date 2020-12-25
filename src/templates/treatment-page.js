@@ -43,7 +43,7 @@ export const TreatmentPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <h3
-                className="has-text-weight-semibold is-size-2 mb-0 is-size-3-mobile is-size-3-tablet"
+                className="has-text-weight-semibold is-size-2 mb-0 is-size-5-mobile is-size-3-tablet"
                 style={{
                   marginBottom: 0,
                 }}
