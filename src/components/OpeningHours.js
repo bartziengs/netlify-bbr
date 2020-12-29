@@ -9,8 +9,7 @@ const OpeningHours = class extends React.Component {
 
     return (
       <div className="opening-hours has-text-left">
-        <p>Openingstijden</p>
-        <table className="table">
+        <table className="table is-narrow">
           <tbody>
             {days.map((day) =>
               !day.closed ? (
@@ -23,7 +22,7 @@ const OpeningHours = class extends React.Component {
               ) : (
                 <tr>
                   <td>{day.day}</td>
-                  <td>gesloten</td>
+                  <td colSpan='3'>gesloten</td>
                 </tr>
               )
             )}
