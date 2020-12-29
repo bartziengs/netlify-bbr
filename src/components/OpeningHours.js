@@ -1,31 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql, StaticQuery } from "gatsby";
 
 const OpeningHours = class extends React.Component {
   render = () => {
-    let openingHours = [
-      { day: "ma", from: "17:00", to: "17:00" },
-      { day: "ma", from: "17:00", to: "17:00" },
-      { day: "ma", from: "17:00", to: "17:00" },
-      { day: "ma", from: "17:00", to: "17:00" },
-      { day: "ma", from: "17:00", to: "17:00" },
-    ];
-
-    const { days } = openingHours;
+    const { data } = this.props;
+    const days = data.allMarkdownRemark.edges[0].node.frontmatter.openinghours;
 
     return (
       <div className="opening-hours has-text-left">
         <p>Openingstijden</p>
         <table className="table">
           <tbody>
-              {openingHours.map((day) => (
-            <tr>
-                <td>{day.day}</td>
-                <td>{day.from}</td>
-                <td>-</td>
-                <td>{day.to}</td>
-            </tr>
-              ))}
+            {days.map((day) =>
+              !day.closed ? (
+                <tr>
+                  <td>{day.day}</td>
+                  <td>{day.from}</td>
+                  <td>-</td>
+                  <td>{day.to}</td>
+                </tr>
+              ) : (
+                <tr>
+                  <td>{day.day}</td>
+                  <td>gesloten</td>
+                </tr>
+              )
+            )}
           </tbody>
         </table>
       </div>
@@ -34,7 +35,41 @@ const OpeningHours = class extends React.Component {
 };
 
 OpeningHours.propTypes = {
-  days: PropTypes.array,
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
-export default OpeningHours;
+// export default OpeningHours;
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query OpeningHoursQuery {
+        allMarkdownRemark(
+          filter: {
+            frontmatter: { templateKey: { eq: "no-page-openinghours" } }
+          }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                templateKey
+                openinghours {
+                  closed
+                  day
+                  from
+                  to
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data) => <OpeningHours data={data} />}
+  />
+);
