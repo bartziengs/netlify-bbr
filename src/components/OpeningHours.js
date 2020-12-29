@@ -4,31 +4,30 @@ import { graphql, StaticQuery } from "gatsby";
 
 const OpeningHours = class extends React.Component {
   render = () => {
-    const { data } = this.props;
-    const days = data.allMarkdownRemark.edges[0].node.frontmatter.openinghours;
+    const { days } = this.props;
 
     return (
-      <div className="opening-hours has-text-left">
-        <table className="table is-narrow">
-          <tbody>
-            {days.map((day) =>
-              !day.closed ? (
-                <tr>
-                  <td>{day.day}</td>
-                  <td>{day.from}</td>
-                  <td>-</td>
-                  <td>{day.to}</td>
-                </tr>
-              ) : (
-                <tr>
-                  <td>{day.day}</td>
-                  <td colSpan='3'>gesloten</td>
-                </tr>
-              )
-            )}
-          </tbody>
-        </table>
-      </div>
+          <div className="opening-hours has-text-left" style={{marginLeft: "2.75rem"}}>
+            <table className="table is-narrow">
+              <tbody>
+                {days.map((day) =>
+                  !day.closed ? (
+                    <tr key={day.day}>
+                      <td>{day.day}</td>
+                      <td>{day.from}</td>
+                      <td>-</td>
+                      <td>{day.to}</td>
+                    </tr>
+                  ) : (
+                    <tr key={day.day}>
+                      <td>{day.day}</td>
+                      <td colSpan="3">gesloten</td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
+          </div>
     );
   };
 };
@@ -69,6 +68,10 @@ export default () => (
         }
       }
     `}
-    render={(data) => <OpeningHours data={data} />}
+    render={(data) => (
+      <OpeningHours
+        days={data.allMarkdownRemark.edges[0].node.frontmatter.openinghours}
+      />
+    )}
   />
 );

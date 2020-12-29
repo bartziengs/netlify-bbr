@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({
@@ -143,11 +141,11 @@ export const IndexPageTemplate = ({
                   Laatste nieuws
                 </h3>
                 <BlogRoll />
-                <div className="column is-12 has-text-centered">
+                {/* <div className="column is-12 has-text-centered">
                   <Link className="btn" to="/blog">
                     Lees meer
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
