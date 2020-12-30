@@ -57,7 +57,7 @@ payot:
       image: /img/logo-sunny.jpg
   heading: Huidverzorgingslijn van Payot
   description: |
-    Onderstaande Payot producten zijn te koop in mijn salon
+    Onderstaande Payot producten zijn verkrijgbaar in mijn salon
 full_image: /img/bbr6.jpg
 other:
   products:
