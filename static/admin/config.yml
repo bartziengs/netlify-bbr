@@ -76,3 +76,10 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+
+  - name: "openinghours"
+    label: "Openingstijden"
+    folder: "src/info/openinghours"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "no-page-openinghours"}
+      - {label: Dagen, name: openinghours, widget: list, fields: [{label: Dag, name: day, widget: string}, {label: van, name: from, widget: string},{label: tot, name: to, widget: string},{label: "Gesloten", name: "closed", widget: "boolean"}]}

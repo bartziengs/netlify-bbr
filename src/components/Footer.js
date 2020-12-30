@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import logo from "../img/logo.svg"; 
+import logo from "../img/logo.svg";
 import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
-import OpeningHours from "../components/OpeningHours"
-import '../styles/footer.sass'
-
-
+import OpeningHours from "../components/OpeningHours";
+import "../styles/footer.sass";
 
 const Footer = class extends React.Component {
   render() {
@@ -88,6 +86,35 @@ const Footer = class extends React.Component {
                     style={{ width: "1em", height: "1em" }}
                   />
                 </a>
+                {/* Adresgegevens */}
+                <div className="is-centered">
+                  <div
+                    className="has-text-left opening-hours"
+                    style={{ marginLeft: "2.75rem", marginTop: "1rem" }}
+                  >
+                    <table className="table is-narrow">
+                      <thead>
+                        <tr>
+                          <th>Contactgegevens:</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Beauty Block</td>
+                        </tr>
+                        <tr>
+                          <td>Dorpsstraat55b</td>
+                        </tr>
+                        <tr>
+                          <td>5241 EA Rosmalen</td>
+                        </tr>
+                        <tr>
+                          <td>Tel.no: 0634631851</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

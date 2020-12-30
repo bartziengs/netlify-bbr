@@ -30,11 +30,9 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    // const posts = result.data.allMarkdownRemark.edges.filter(value => typeof(value) === 'string' || value instanceof String)
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach((edge) => {
-      // if (edge.node.frontmatter.templateKey !== "info") {
         const id = edge.node.id;
         createPage({
           path: edge.node.fields.slug,
@@ -47,7 +45,6 @@ exports.createPages = ({ actions, graphql }) => {
             id,
           },
         });
-      // }
     });
 
     // Tag pages:
@@ -89,3 +86,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage.startsWith("develop")) {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          "react-dom": "@hot-loader/react-dom",
+        },
+      },
+    })
+  }
+}
