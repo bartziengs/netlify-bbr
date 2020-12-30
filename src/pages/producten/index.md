@@ -47,11 +47,17 @@ payot:
         baard haartjes. Reinigt de huid en verwijdert onzuiverheden. Het
         verfrist en geeft energie. Het verstevigt, beschermt en verzacht.      
     - product_title: Payot Sunny
-      text: sunny
+      text: Payot sunny beschermt je huid optimaal tegen de zon. Deze zonnebrand crème
+        is geschikt voor gelaat en lichaam om vroegtijdige huidveroudering te
+        voorkomen, dit product zie en voel je niet zitten dankzij de lichte en
+        niet plakkerige textuur. De UV Filters beschermen je huid tegen UVA en
+        UVB straling. Met duurzame ingrediënten is deze zonnelijn zo ontwikkeld
+        om het milieu zo min mogelijk aan te tasten. Verkrijgbaar in SPF 15, 30
+        en 50.
       image: /img/logo-sunny.jpg
   heading: Huidverzorgingslijn van Payot
   description: |
-    Onderstaande Payot producten zijn te koop in mijn salon
+    Onderstaande Payot producten zijn verkrijgbaar in mijn salon
 full_image: /img/bbr6.jpg
 other:
   products:
