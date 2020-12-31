@@ -2,8 +2,8 @@
 templateKey: no-page-openinghours
 openinghours:
   - day: ma
-    from: ''
-    to: ''
+    from: 10:00
+    to: 17:00
     closed: true
   - day: di
     from: 10:00
@@ -26,7 +26,7 @@ openinghours:
     to: 17:00
     closed: false
   - day: zo
-    from: ''
-    to: ''
+    from: 10:00
+    to: 17:00
     closed: true
 ---
