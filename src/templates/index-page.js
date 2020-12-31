@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import Layout from "../components/Layout";
-import BlogRoll from "../components/BlogRoll";
+import React from 'react'
+import PropTypes from 'prop-types'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Layout from '../components/Layout'
+import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
@@ -26,12 +26,12 @@ export const IndexPageTemplate = ({
     >
       <div
         style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column",
+          display: 'flex',
+          height: '150px',
+          lineHeight: '1',
+          justifyContent: 'space-around',
+          alignItems: 'left',
+          flexDirection: 'column',
         }}
       >
         <h1
@@ -40,9 +40,9 @@ export const IndexPageTemplate = ({
             // boxShadow:
             //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
             // backgroundColor: 'rgb(74, 68, 68)',
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
+            color: 'white',
+            lineHeight: '1',
+            padding: '0.25em',
           }}
         >
           {title}
@@ -53,9 +53,9 @@ export const IndexPageTemplate = ({
             // boxShadow:
             //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
             // backgroundColor: 'rgb(74, 68, 68)',
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
+            color: 'white',
+            lineHeight: '1',
+            padding: '0.25em',
           }}
         >
           {subheading}
@@ -95,13 +95,11 @@ export const IndexPageTemplate = ({
                     {selling_points.title}
                   </h3>
                   {/* list */}
-                  <ul style={{listStyle: "inside",
-                  paddingLeft: "0.5rem"
-                }}>
+                  <ul style={{ listStyle: 'inside', paddingLeft: '0.5rem' }}>
                     {selling_points.points.map((item) => (
-                      <li key={item.text}
-                      style={{paddingBottom: "0.3rem"}}>
-                        {item.text}</li>
+                      <li key={item.text} style={{ paddingBottom: '0.3rem' }}>
+                        {item.text}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -154,7 +152,7 @@ export const IndexPageTemplate = ({
       {/* </div> */}
     </section>
   </div>
-);
+)
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -177,10 +175,10 @@ IndexPageTemplate.propTypes = {
   // intro: PropTypes.shape({
   //   blurbs: PropTypes.array,
   // }),
-};
+}
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
@@ -196,8 +194,8 @@ const IndexPage = ({ data }) => {
         // intro={frontmatter.intro}
       />
     </Layout>
-  );
-};
+  )
+}
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -205,9 +203,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-};
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -271,4 +269,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

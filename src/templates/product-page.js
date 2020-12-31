@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Features from "../components/Features";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import Features from '../components/Features'
 
 export const ProductPageTemplate = ({
   image,
@@ -18,15 +18,15 @@ export const ProductPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: "center center",
+        backgroundPosition: 'center center',
       }}
     >
       <h2
         className="is-size-1 is-size-3-mobile is-size-3-tablet page-title header-home"
         style={{
-          color: "white",
-          padding: "1rem",
-          textTransform: 'uppercase'
+          color: 'white',
+          padding: '1rem',
+          textTransform: 'uppercase',
         }}
       >
         {title}
@@ -56,7 +56,7 @@ export const ProductPageTemplate = ({
                 ? fullImage.childImageSharp.fluid.src
                 : fullImage
             })`,
-            backgroundPositionY: "65%",
+            backgroundPositionY: '65%',
           }}
         />
 
@@ -75,7 +75,7 @@ export const ProductPageTemplate = ({
       </div>
     </section>
   </div>
-);
+)
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -89,10 +89,10 @@ ProductPageTemplate.propTypes = {
   other: PropTypes.shape({
     products: PropTypes.array,
   }),
-};
+}
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
@@ -104,8 +104,8 @@ const ProductPage = ({ data }) => {
         other={frontmatter.other}
       />
     </Layout>
-  );
-};
+  )
+}
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
@@ -113,9 +113,9 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-};
+}
 
-export default ProductPage;
+export default ProductPage
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
@@ -169,4 +169,4 @@ export const productPageQuery = graphql`
       }
     }
   }
-`;
+`

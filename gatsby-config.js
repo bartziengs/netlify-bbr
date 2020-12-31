@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        indentedSyntax: true
-      }
+        indentedSyntax: true,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',

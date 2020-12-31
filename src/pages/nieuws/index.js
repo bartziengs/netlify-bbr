@@ -11,16 +11,15 @@ export default class BlogIndexPage extends React.Component {
           className="full-width-image-container margin-top-0"
           style={{
             backgroundImage: `url('/img/bbr3.jpg')`,
-            backgroundPosition: 'center center'
+            backgroundPosition: 'center center',
           }}
-      
         >
           <h1
             className="has-text-weight-bold has-text-centered is-size-2-widescreen is-size-3-mobile is-size-2-tablet page-title header-home"
             style={{
               color: 'white',
               padding: '1rem',
-              textTransform: 'uppercase'
+              textTransform: 'uppercase',
             }}
           >
             Het laatste nieuws

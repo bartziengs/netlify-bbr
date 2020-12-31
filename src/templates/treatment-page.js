@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Features from "../components/Features";
-import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import Features from '../components/Features'
+import Testimonials from '../components/Testimonials'
+import Pricing from '../components/Pricing'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const TreatmentPageTemplate = ({
   image,
@@ -22,15 +22,15 @@ export const TreatmentPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: "right center",
+        backgroundPosition: 'right center',
       }}
     >
       <h2
         className="has-text-weight-bold is-size-1 is-size-3-mobile is-size-3-tablet  page-title header-home"
         style={{
-          color: "white",
-          padding: "1rem",
-          textTransform: "uppercase",
+          color: 'white',
+          padding: '1rem',
+          textTransform: 'uppercase',
         }}
       >
         {title}
@@ -119,17 +119,13 @@ export const TreatmentPageTemplate = ({
         </div>
 
         {/* ONTHAREN */}
-        <div className="section"
-        style={{marginBottom: 0,
-        paddingBottom:0}}
-        >
+        <div className="section" style={{ marginBottom: 0, paddingBottom: 0 }}>
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <h3
                 className="has-text-weight-semibold is-size-2 mb-0 is-size-3-mobile is-size-3-tablet"
                 style={{
                   marginBottom: 0,
-                  
                 }}
               >
                 Ontharen
@@ -161,10 +157,7 @@ export const TreatmentPageTemplate = ({
         </div>
 
         {/* LOSSE */}
-        <div className="section"
-        style={{marginBottom: 0,
-        paddingBottom:0}}
-        >
+        <div className="section" style={{ marginBottom: 0, paddingBottom: 0 }}>
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <h3
@@ -203,7 +196,7 @@ export const TreatmentPageTemplate = ({
       </div>
     </section>
   </div>
-);
+)
 
 TreatmentPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -218,10 +211,10 @@ TreatmentPageTemplate.propTypes = {
   }),
   hairremoval: PropTypes.array,
   single: PropTypes.array,
-};
+}
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
@@ -234,8 +227,8 @@ const ProductPage = ({ data }) => {
         single={frontmatter.single}
       />
     </Layout>
-  );
-};
+  )
+}
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
@@ -243,9 +236,9 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-};
+}
 
-export default ProductPage;
+export default ProductPage
 
 export const treatmentPageQuery = graphql`
   query TreatmentPage($id: String!) {
@@ -288,4 +281,4 @@ export const treatmentPageQuery = graphql`
       }
     }
   }
-`;
+`
