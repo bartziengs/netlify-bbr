@@ -1,32 +1,32 @@
 ---
 templateKey: no-page-openinghours
-openinghours: 
--   day: ma
-    from: ''
-    to: ''
+openinghours:
+  - day: ma
+    from: "0"
+    to: "0"
     closed: true
--   day: di
-    from: '10:00'
-    to: '17:00'
+  - day: di
+    from: 10:00
+    to: 17:00
     closed: false
--   day: wo
-    from: '10:00'
-    to: '21:00'
+  - day: wo
+    from: 10:00
+    to: 21:00
     closed: false
--   day: do
-    from: '10:00'
-    to: '21:00'
+  - day: do
+    from: 10:00
+    to: 21:00
     closed: false
--   day: vr
-    from: '10:00'
-    to: '17:00'
+  - day: vr
+    from: 9:00
+    to: 17:00
     closed: false
--   day: za
-    from: '10:00'
-    to: '17:00'
+  - day: za
+    from: 10:00
+    to: 17:00
     closed: false
--   day: zo
-    from: ''
-    to: ''
+  - day: zo
+    from: "0"
+    to: "0"
     closed: true
 ---
