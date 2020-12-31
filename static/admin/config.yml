@@ -79,7 +79,7 @@ collections:
 
   - name: "openinghours"
     label: "Openingstijden"
-    folder: "src/info/openinghours"
+    folder: "src/info/openinghours.md"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "no-page-openinghours"}
       - {label: Dagen, name: openinghours, widget: list, fields: [{label: Dag, name: day, widget: string}, {label: van, name: from, widget: string},{label: tot, name: to, widget: string},{label: "Gesloten", name: "closed", widget: "boolean"}]}
