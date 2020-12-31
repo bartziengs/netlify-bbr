@@ -7,27 +7,29 @@ const OpeningHours = class extends React.Component {
     const { days } = this.props;
 
     return (
-          <div className="opening-hours has-text-left" style={{marginLeft: "2.75rem"}}>
-            <table className="table is-narrow">
-              <tbody>
-                {days.map((day) =>
-                  !day.closed ? (
-                    <tr key={day.day}>
-                      <td>{day.day}</td>
-                      <td>{day.from}</td>
-                      <td>-</td>
-                      <td>{day.to}</td>
-                    </tr>
-                  ) : (
-                    <tr key={day.day}>
-                      <td>{day.day}</td>
-                      <td colSpan="3">gesloten</td>
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </table>
-          </div>
+      <div className="opening-hours has-text-left columns is-centered is-mobile">
+        {/* <div className="column"> */}
+          <table className="table is-narrow column">
+            <tbody>
+              {days.map((day) =>
+                !day.closed ? (
+                  <tr key={day.day}>
+                    <td>{day.day}</td>
+                    <td>{day.from}</td>
+                    <td>-</td>
+                    <td>{day.to}</td>
+                  </tr>
+                ) : (
+                  <tr key={day.day}>
+                    <td>{day.day}</td>
+                    <td colSpan="3">gesloten</td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
+        </div>
+      // </div>
     );
   };
 };

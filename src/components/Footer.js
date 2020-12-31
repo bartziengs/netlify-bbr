@@ -24,9 +24,9 @@ const Footer = class extends React.Component {
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
             <div style={{ maxWidth: "100vw" }} className="columns">
-              <div className="column is-4">
+              <div className="column is-4 is-hidden-touch">
                 <section className="menu">
-                  <ul className="menu-list">
+                  <ul className="menu-list is-mobile">
                     <li>
                       <Link to="/" className="navbar-item">
                         Home
@@ -87,33 +87,31 @@ const Footer = class extends React.Component {
                   />
                 </a>
                 {/* Adresgegevens */}
-                <div className="is-centered">
-                  <div
-                    className="has-text-left opening-hours"
-                    style={{ marginLeft: "2.75rem", marginTop: "1rem" }}
-                  >
-                    <table className="table is-narrow">
-                      <thead>
-                        <tr>
-                          <th>Contactgegevens:</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Beauty Block</td>
-                        </tr>
-                        <tr>
-                          <td>Dorpsstraat55b</td>
-                        </tr>
-                        <tr>
-                          <td>5241 EA Rosmalen</td>
-                        </tr>
-                        <tr>
-                          <td>Tel.no: 0634631851</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                <div
+                  className="has-text-left opening-hours columns is-centered is-mobile"
+                  style={{ marginTop: "1rem" }}
+                >
+                  <table className="table is-narrow column">
+                    <thead>
+                      <tr>
+                        <th>Contactgegevens:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Beauty Block</td>
+                      </tr>
+                      <tr>
+                        <td>Dorpsstraat55b</td>
+                      </tr>
+                      <tr>
+                        <td>5241 EA Rosmalen</td>
+                      </tr>
+                      <tr>
+                        <td>Tel.no: 0634631851</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
