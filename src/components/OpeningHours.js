@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 import { graphql, StaticQuery } from 'gatsby'
 
 const OpeningHours = class extends React.Component {
@@ -15,7 +16,7 @@ const OpeningHours = class extends React.Component {
               !day.closed ? (
                 <tr key={day.day}>
                   <td>{day.day}</td>
-                  <td>{day.from}</td>
+                  <td>{moment(day.from).format('HH:mm')}</td>
                   <td>-</td>
                   <td>{day.to}</td>
                 </tr>
