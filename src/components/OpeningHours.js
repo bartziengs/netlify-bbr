@@ -18,7 +18,7 @@ const OpeningHours = class extends React.Component {
                   <td>{day.day}</td>
                   <td>{moment(day.from).format('HH:mm')}</td>
                   <td>-</td>
-                  <td>{day.to}</td>
+                  <td>{moment(day.to).format('HH:mm')}</td>
                 </tr>
               ) : (
                 <tr key={day.day}>
