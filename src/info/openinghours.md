@@ -2,7 +2,7 @@
 templateKey: no-page-openinghours
 openinghours:
   - day: ma
-    from: 2020-11-30T23:00:00.000Z
+    from: 2020-11-30T23:09:00.000Z
     to: 2020-11-30T23:00:00.000Z
     closed: true
   - day: di
