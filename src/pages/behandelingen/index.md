@@ -100,5 +100,5 @@ single:
   - description: Rug massage (30 min)
     price: 30
   - description: Gelaat/decolleté en rug-rug massage  (30 min)
-    price: 604
+    price: 30
 ---
