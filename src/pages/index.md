@@ -1,35 +1,40 @@
 ---
 templateKey: index-page
 title: SCHOONHEIDSSALON BEAUTY BLOCK
-image: /img/bbr1.jpg
+image: /img/img-20201231-wa0008.jpg
 heading: Great coffee with a conscience
 subheading: ___Brows & Beauty___
-description: >-
-  Staat voor kwaliteit, en persoonlijk contact en ontspanning. Een prachtige salon gevestigd midden in het centrum van Rosmalen, gespecialiseerd in huidverzorging en huidverbetering met kwalitatieve en betaalbare behandelingen voor mannen en vrouwen. Gebaseerd op de nieuwste methodes van Payot-behandelingen voor mannen en vrouwen, welke worden ondersteund met een behandelplan voor thuis, waardoor wij in goede samenwerking een optimale huidconditie kunnen bereiken.
+description: Staat voor kwaliteit, en persoonlijk contact en ontspanning. Een
+  prachtige salon gevestigd midden in het centrum van Rosmalen, gespecialiseerd
+  in huidverzorging en huidverbetering met kwalitatieve en betaalbare
+  behandelingen voor mannen en vrouwen. Gebaseerd op de nieuwste methodes van
+  Payot-behandelingen voor mannen en vrouwen, welke worden ondersteund met een
+  behandelplan voor thuis, waardoor wij in goede samenwerking een optimale
+  huidconditie kunnen bereiken.
 selling_points:
   title: Waarom Beauty Block Rosmalen?
   points:
-    - text: >
+    - text: |
         Semi Permanente Make-up
-    - text: >
+    - text: |
         Acne + bindweefsel specialist
-    - text: >
+    - text: |
         Voor mannen en vrouwen
-    - text: >
+    - text: |
         Voor alle leeftijden
-    - text: > 
+    - text: |
         Betaalbare behandelingen
-    - text: > 
+    - text: |
         Totale ontspanning 
-    - text: > 
+    - text: |
         Ondersteuning voor thuisgebruik
-    - text: > 
+    - text: |
         Stoelverwarming
-    - text: > 
+    - text: |
         Aangesloten bij de Anbos
-    - text: > 
+    - text: |
         Gratis parkeren
-    - text: > 
+    - text: |
         Midden in het centrum Rosmalen
 main:
   heading: Een indruk van de salon
