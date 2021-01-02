@@ -3,7 +3,7 @@ templateKey: index-page
 title: SCHOONHEIDSSALON BEAUTY BLOCK
 image: /img/img-20201231-wa0008.jpg
 heading: Great coffee with a conscience
-subheading: ___Brows & Beauty___
+subheading: ___Inner Beauty is your job, Beauty Block does the rest___
 description: Staat voor kwaliteit, en persoonlijk contact en ontspanning. Een
   prachtige salon gevestigd midden in het centrum van Rosmalen, gespecialiseerd
   in huidverzorging en huidverbetering met kwalitatieve en betaalbare

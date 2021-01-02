@@ -48,7 +48,7 @@ export const IndexPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title has-text-centered"
+          className="is-size-4-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title has-text-centered"
           style={{
             // boxShadow:
             //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
@@ -67,28 +67,11 @@ export const IndexPageTemplate = ({
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              {/* <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div> */}
               <div className="columns">
                 <div className="column is-12">
                   <p className="is-size-5">{description}</p>
                 </div>
               </div>
-              {/* <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div> */}
               <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
@@ -109,7 +92,6 @@ export const IndexPageTemplate = ({
                   <h3 className="has-text-weight-semibold is-size-3">
                     {main.heading}
                   </h3>
-                  {/* <p>{main.description}</p> */}
                 </div>
               </div>
               <div className="tile is-ancestor">
@@ -139,17 +121,11 @@ export const IndexPageTemplate = ({
                   Laatste nieuws
                 </h3>
                 <BlogRoll />
-                {/* <div className="column is-12 has-text-centered">
-                  <Link className="btn" to="/blog">
-                    Lees meer
-                  </Link>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   </div>
 )
@@ -157,9 +133,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  // heading: PropTypes.string,
   subheading: PropTypes.string,
-  // mainpitch: PropTypes.object,
   description: PropTypes.string,
   selling_points: PropTypes.shape({
     title: PropTypes.string,
@@ -172,9 +146,6 @@ IndexPageTemplate.propTypes = {
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
-  // intro: PropTypes.shape({
-  //   blurbs: PropTypes.array,
-  // }),
 }
 
 const IndexPage = ({ data }) => {
@@ -187,11 +158,9 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        // mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         selling_points={frontmatter.selling_points}
         main={frontmatter.main}
-        // intro={frontmatter.intro}
       />
     </Layout>
   )
