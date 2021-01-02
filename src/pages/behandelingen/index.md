@@ -108,8 +108,6 @@ hairremoval:
     price: 20
   - description: Onderarmen (inclusief handen)
     price: 25
-  - description: Onderbenen
-    price: 25
   - description: Bikinilijn
     price: 20
   - description: Buik

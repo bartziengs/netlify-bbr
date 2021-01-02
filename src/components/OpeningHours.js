@@ -34,14 +34,9 @@ const OpeningHours = class extends React.Component {
 }
 
 OpeningHours.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+  days: PropTypes.array
 }
 
-// export default OpeningHours;
 
 export default () => (
   <StaticQuery
