@@ -3,18 +3,13 @@ import PropTypes from "prop-types";
 
 const PriceList = class extends React.Component {
   render = () => {
-    const treatments  = this.props.treatments;
-    const title  = this.props.title;
+    const treatments = this.props.treatments;
+    const title = this.props.title;
     return (
-        <div className="mx-3 mb-5">
+      <div className="mx-3 mb-5">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h3
-              className="has-text-weight-semibold is-size-2 mb-0 is-size-3-mobile is-size-3-tablet"
-              style={{
-                marginBottom: 0,
-              }}
-            >
+            <h3 className="has-text-weight-semibold is-size-2 mb-0 is-size-4-mobile is-size-3-tablet">
               {title}
             </h3>
           </div>
@@ -25,7 +20,7 @@ const PriceList = class extends React.Component {
               <thead>
                 <tr>
                   <th>Behandeling</th>
-                  <th>Prijs</th>
+                  <th className="w-15">Prijs</th>
                 </tr>
               </thead>
               <tbody>
@@ -40,13 +35,13 @@ const PriceList = class extends React.Component {
           </div>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 PriceList.propTypes = {
-    title: PropTypes.string,
-    treatments: PropTypes.array
-}
+  title: PropTypes.string,
+  treatments: PropTypes.array,
+};
 
 export default PriceList;

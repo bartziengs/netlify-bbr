@@ -10,7 +10,7 @@ const Treatments = class extends React.Component {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h2
-              className="has-text-weight-semibold is-size-2 mb-0 is-size-5-mobile is-size-3-tablet"
+              className="has-text-weight-semibold is-size-2 mb-0 is-size-4-mobile is-size-3-tablet"
               style={{ marginBottom: 0,
             paddingBottom : 0}}
             >
@@ -23,7 +23,7 @@ const Treatments = class extends React.Component {
           <div className="columns is-multiline">
             {treatments.map((treatment) => (
               <div key={treatment.description} className="column is-6">
-                <article className="message">
+                <div className="message h-100">
                   <div className="message-header">
                     <p>{treatment.title}</p>
                   </div>
@@ -38,7 +38,7 @@ const Treatments = class extends React.Component {
                     </p>
                     <div className="mt-1">{treatment.description}</div>
                   </div>
-                </article>
+                </div>
               </div>
             ))}
           </div>
