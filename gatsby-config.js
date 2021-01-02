@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Beauty Block Rosmalen',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Staat voor kwaliteit, en persoonlijk contact en ontspanning. Een prachtige salon gevestigd midden in het centrum van Rosmalen, gespecialiseerd in huidverzorging en huidverbetering met kwalitatieve en betaalbare behandelingen voor mannen en vrouwen.',
   },
   plugins: [
     {

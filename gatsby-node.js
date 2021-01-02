@@ -6,7 +6,7 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  // the filter clause is applied so that editable markdown can passed to the cms with templatekey no-page
+  // the filter clause is applied so that editable markdown can passed to the cms with templatekey suffix no-page
   return graphql(`
     {
       allMarkdownRemark(
