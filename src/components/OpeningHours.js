@@ -9,7 +9,6 @@ const OpeningHours = class extends React.Component {
 
     return (
       <div className="opening-hours has-text-left columns is-centered is-mobile">
-        {/* <div className="column"> */}
         <table className="table is-narrow column">
           <tbody>
             {days.map((day) =>
@@ -30,7 +29,6 @@ const OpeningHours = class extends React.Component {
           </tbody>
         </table>
       </div>
-      // </div>
     )
   }
 }
