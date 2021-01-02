@@ -9,7 +9,6 @@ const OpeningHours = class extends React.Component {
 
     return (
       <div className="opening-hours has-text-left columns is-centered is-mobile">
-        {/* <div className="column"> */}
         <table className="table is-narrow column">
           <tbody>
             {days.map((day) =>
@@ -30,20 +29,14 @@ const OpeningHours = class extends React.Component {
           </tbody>
         </table>
       </div>
-      // </div>
     )
   }
 }
 
 OpeningHours.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+  days: PropTypes.array
 }
 
-// export default OpeningHours;
 
 export default () => (
   <StaticQuery

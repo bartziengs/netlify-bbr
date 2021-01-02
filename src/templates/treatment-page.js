@@ -2,10 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Treatments  from "../components/Treatments";
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PriceList from '../components/PriceList';
 
 export const TreatmentPageTemplate = ({
   image,
@@ -39,160 +41,13 @@ export const TreatmentPageTemplate = ({
     <section className="section section--gradient">
       <div className="container">
         {/* GEZICHTSBEHANDELINGEN */}
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <h3
-                className="has-text-weight-semibold is-size-2 mb-0 is-size-5-mobile is-size-3-tablet"
-                style={{
-                  marginBottom: 0,
-                }}
-              >
-                {facial.title}
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div className="column is-10 is-offset-1">
-          <div className="columns is-multiline">
-            {facial.treatments.map((treatment) => (
-              <div key={treatment.description} className="column is-6">
-                <article className="message">
-                  <div className="message-header">
-                    <p>{treatment.title}</p>
-                  </div>
-                  <div className="message-body">
-                    <p className="my-0">
-                      <span className="has-text-weight-bold">Prijs: </span>€
-                      {treatment.price},-
-                    </p>
-                    <p className="my-0">
-                      <span className="has-text-weight-bold">Duur: </span>€
-                      {treatment.duration} min
-                    </p>
-                    <div className="mt-1">{treatment.description}</div>
-                  </div>
-                </article>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* OVERIGE */}
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <h3
-                className="has-text-weight-semibold is-size-2 mb-0 is-size-3-mobile is-size-3-tablet"
-                style={{
-                  marginBottom: 0,
-                }}
-              >
-                {other.title}
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div className="column is-10 is-offset-1">
-          <div className="columns is-multiline">
-            {other.treatments.map((treatment) => (
-              <div key={treatment.description} className="column is-6">
-                <article className="message">
-                  <div className="message-header">
-                    <p>{treatment.title}</p>
-                  </div>
-                  <div className="message-body">
-                    <p className="my-0">
-                      <span className="has-text-weight-bold">Prijs: </span>€
-                      {treatment.price},-
-                    </p>
-                    <p className="my-0">
-                      <span className="has-text-weight-bold">Duur: </span>
-                      {treatment.duration} min
-                    </p>
-                    <div className="mt-1">{treatment.description}</div>
-                  </div>
-                </article>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        <Treatments title={facial.title} treatments={facial.treatments} />
+        {/* BEHANDELINGEN */}
+        <Treatments title={other.title} treatments={other.treatments} />
         {/* ONTHAREN */}
-        <div className="section" style={{ marginBottom: 0, paddingBottom: 0 }}>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <h3
-                className="has-text-weight-semibold is-size-2 mb-0 is-size-3-mobile is-size-3-tablet"
-                style={{
-                  marginBottom: 0,
-                }}
-              >
-                Ontharen
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div className="section">
-          <div className="column is-10 is-offset-1">
-            <div className="columns">
-              <table className="table is-fullwidth">
-                <thead>
-                  <tr>
-                    <th>Behandeling</th>
-                    <th>Prijs</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {hairremoval.map((item) => (
-                    <tr>
-                      <td>{item.description}</td>
-                      <td>€{item.price},-</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
+        <PriceList title='Ontharen' treatments={hairremoval} />
         {/* LOSSE */}
-        <div className="section" style={{ marginBottom: 0, paddingBottom: 0 }}>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <h3
-                className="has-text-weight-semibold is-size-2 mb-0 is-size-3-mobile is-size-3-tablet"
-                style={{
-                  marginBottom: 0,
-                }}
-              >
-                Losse behandelingen
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div className="section">
-          <div className="column is-10 is-offset-1">
-            <div className="columns">
-              <table className="table is-fullwidth">
-                <thead>
-                  <tr>
-                    <th>Behandeling</th>
-                    <th>Prijs</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {single.map((item) => (
-                    <tr>
-                      <td>{item.description}</td>
-                      <td>€{item.price},-</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+        <PriceList title='Losse Behandelingen' treatments={single} />
       </div>
     </section>
   </div>
