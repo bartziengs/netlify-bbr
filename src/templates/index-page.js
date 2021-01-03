@@ -88,7 +88,9 @@ export const IndexPageTemplate = ({
                   <h3 className="has-text-weight-semibold is-size-3">
                     Laatste nieuws
                   </h3>
-                  <HomePageBlogRoll />
+                  <div className="columns is-multiline">
+                    <HomePageBlogRoll />
+                  </div>
                 </div>
               </div>
             </div>

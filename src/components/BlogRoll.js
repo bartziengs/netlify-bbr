@@ -7,14 +7,11 @@ export const BlogRoll = class BlogRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    const { forHomePage } = this.props; 
-
-    const postsToRender = forHomePage && posts.length > 1 ? posts.slice(0,2) : posts
 
     return (
-      <div className="columns is-multiline">
-        {postsToRender &&
-          postsToRender.map(({ node: post }) => (
+      <>
+        {posts &&
+          posts.map(({node :post}) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`h-100 blog-list-item tile is-child box notification ${
@@ -56,7 +53,7 @@ export const BlogRoll = class BlogRoll extends React.Component {
               </article>
             </div>
           ))}
-      </div>
+      </>
     );
   }
 }
@@ -69,7 +66,7 @@ BlogRoll.propTypes = {
   }),
 };
 
-export const blogPostQuery = graphql`
+const blogPostQuery = graphql`
   query BlogRollQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
