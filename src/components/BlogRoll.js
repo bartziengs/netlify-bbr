@@ -101,6 +101,6 @@ const blogPostQuery = graphql`
 export const FullBlogRoll = () => (
   <StaticQuery
     query={blogPostQuery}
-    render={(data) => <BlogRoll data={data} forHomePage={false} />}
+    render={(data) => <BlogRoll data={data} />}
   />
 );
