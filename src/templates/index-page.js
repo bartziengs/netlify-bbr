@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/Layout";
-import BlogRoll from "../components/BlogRoll";
+import { HomePageBlogRoll} from "../components/BlogRoll";
 import SellingPoints from "../components/SellingPoints";
 import { graphql } from "gatsby";
 import PhotoGrid from "../components/Photogrid";
@@ -88,7 +88,7 @@ export const IndexPageTemplate = ({
                   <h3 className="has-text-weight-semibold is-size-3">
                     Laatste nieuws
                   </h3>
-                  <BlogRoll />
+                  <HomePageBlogRoll />
                 </div>
               </div>
             </div>

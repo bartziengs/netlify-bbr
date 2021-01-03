@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Features from "./Features";
 
+
 const Certifications = class extends React.Component {
   render = () => {
     const data = this.props.data;
