@@ -1,10 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
-import SellingPoints from '../components/SellingPoints'
-import {  graphql } from "gatsby";
+import React from "react";
+import PropTypes from "prop-types";
+import Layout from "../components/Layout";
+import BlogRoll from "../components/BlogRoll";
+import SellingPoints from "../components/SellingPoints";
+import { graphql } from "gatsby";
+import PhotoGrid from "../components/Photogrid";
+import Certifications from "../components/Certifications";
 
 export const IndexPageTemplate = ({
   image,
@@ -27,20 +28,20 @@ export const IndexPageTemplate = ({
     >
       <div
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          display: "flex",
+          height: "150px",
+          lineHeight: "1",
+          justifyContent: "space-around",
+          alignItems: "left",
+          flexDirection: "column",
         }}
       >
         <h1
           className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen header-home page-title"
           style={{
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em",
           }}
         >
           {title}
@@ -48,9 +49,9 @@ export const IndexPageTemplate = ({
         <h3
           className="is-size-4-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title has-text-centered"
           style={{
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em",
           }}
         >
           {subheading}
@@ -67,50 +68,18 @@ export const IndexPageTemplate = ({
                   <p className="is-size-5">{description}</p>
                 </div>
               </div>
-              {/* <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {selling_points.title}
-                  </h3>
-                  <ul style={{ listStyle: 'inside', paddingLeft: '0.5rem' }}>
-                    {selling_points.points.map((item) => (
-                      <li key={item.text} style={{ paddingBottom: '0.3rem' }}>
-                        {item.text}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div> */}
-              <SellingPoints title={selling_points.title} sellingpoints={selling_points.points} />
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                </div>
+              <SellingPoints
+                title={selling_points.title}
+                sellingpoints={selling_points.points}
+              />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <Certifications data={certifications} />
+              <div className="section">
+                <PhotoGrid data={main} />
               </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-
               <div className="column is-12">
                 <h3 className="has-text-weight-semibold is-size-2">
                   Laatste nieuws
@@ -123,7 +92,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
   </div>
-)
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -142,10 +111,10 @@ IndexPageTemplate.propTypes = {
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
-}
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -160,8 +129,8 @@ const IndexPage = ({ data }) => {
         certifications={frontmatter.certifications}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -169,9 +138,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -201,11 +170,15 @@ export const pageQuery = graphql`
         }
         certifications {
           description
-          title
-          image {
-            childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
-                ...GatsbyImageSharpFluid
+          heading
+          certifications {
+            product_title
+            text
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
@@ -246,4 +219,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

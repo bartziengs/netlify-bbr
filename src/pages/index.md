@@ -36,11 +36,15 @@ selling_points:
         Gratis parkeren
     - text: |
         Midden in het centrum Rosmalen
-certifications: 
-    - title: Anbos
-    - description: |
-        Beauty Block is aangesloten bij Anbos.  Anbos is de brancheorganisatie van gediplomeerde schoonheidsspecialisten. Behartigt als business partner de belangen van haar leden op kwaliteit, vakinhoud en ondernemerschap.
-    - image: /img/anbos.png
+certifications:
+    heading: Diplomas en Certificeringen
+    description: |
+        Onderstaande diplomas en certificeringen zijn behaald ter garantie van de kwaliteit
+    certifications:
+        -   product_title: Anbos
+            text: |
+                Beauty Block is aangesloten bij Anbos.  Anbos is de brancheorganisatie van gediplomeerde schoonheidsspecialisten. Behartigt als business partner de belangen van haar leden op kwaliteit, vakinhoud en ondernemerschap.
+            image: /img/anbos.png
 main:
   heading: Een indruk van de salon
   image1:
