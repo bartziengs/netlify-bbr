@@ -60,7 +60,7 @@ export const IndexPageTemplate = ({
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
+        <div className="section py-1">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="columns">
@@ -80,7 +80,7 @@ export const IndexPageTemplate = ({
         <PhotoGrid data={main} />
 
         {/* LAATSTE NIEUWS */}
-        <div className="section">
+        <div className="section py-1">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="columns">
@@ -108,7 +108,7 @@ IndexPageTemplate.propTypes = {
     title: PropTypes.string,
     products: PropTypes.array,
   }),
-  certifications: PropTypes.array,
+  certifications: PropTypes.object,
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,

@@ -7,7 +7,7 @@ const PhotoGrid = class extends React.Component {
     const data = this.props.data;
 
     return (
-      <div className="section">
+      <div className="section pt-1 pb-3 is-mobile">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h3 className="has-text-weight-semibold is-size-3">
