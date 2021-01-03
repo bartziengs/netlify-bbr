@@ -1,38 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const PhotoGrid = class extends React.Component {
   render = () => {
     const data = this.props.data;
 
     return (
-        <div>
+      <div className="section">
         <div className="columns">
-          <div className="column is-7">
+          <div className="column is-10 is-offset-1">
             <h3 className="has-text-weight-semibold is-size-3">
               {data.heading}
             </h3>
-          </div>
-        </div>
-        <div className="tile is-ancestor">
-          <div className="tile is-vertical">
-            <div className="tile">
-              <div className="tile is-parent is-vertical">
-                <article className="tile is-child">
-                  <PreviewCompatibleImage imageInfo={data.image1} />
-                </article>
+            <div className="tile is-ancestor">
+              <div className="tile is-vertical">
+                <div className="tile">
+                  <div className="tile is-parent is-vertical">
+                    <article className="tile is-child">
+                      <PreviewCompatibleImage imageInfo={data.image1} />
+                    </article>
+                  </div>
+                  <div className="tile is-parent">
+                    <article className="tile is-child">
+                      <PreviewCompatibleImage imageInfo={data.image2} />
+                    </article>
+                  </div>
+                </div>
+                <div className="tile is-parent">
+                  <article className="tile is-child">
+                    <PreviewCompatibleImage imageInfo={data.image3} />
+                  </article>
+                </div>
               </div>
-              <div className="tile is-parent">
-                <article className="tile is-child">
-                  <PreviewCompatibleImage imageInfo={data.image2} />
-                </article>
-              </div>
-            </div>
-            <div className="tile is-parent">
-              <article className="tile is-child">
-                <PreviewCompatibleImage imageInfo={data.image3} />
-              </article>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ PhotoGrid.propTypes = {
     image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  })
+  }),
 };
 
 export default PhotoGrid;

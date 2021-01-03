@@ -7,7 +7,7 @@ const Certifications = class extends React.Component {
     const data = this.props.data;
 
     return (
-      <div>
+      <div className="section">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h3 className="has-text-weight-semibold is-size-3">

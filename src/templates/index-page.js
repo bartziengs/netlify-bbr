@@ -74,17 +74,22 @@ export const IndexPageTemplate = ({
               />
             </div>
           </div>
+        </div>
+        <Certifications data={certifications} />
+
+        <PhotoGrid data={main} />
+
+        {/* LAATSTE NIEUWS */}
+        <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <Certifications data={certifications} />
-              <div className="section">
-                <PhotoGrid data={main} />
-              </div>
-              <div className="column is-12">
-                <h3 className="has-text-weight-semibold is-size-2">
-                  Laatste nieuws
-                </h3>
-                <BlogRoll />
+              <div className="columns">
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-3">
+                    Laatste nieuws
+                  </h3>
+                  <BlogRoll />
+                </div>
               </div>
             </div>
           </div>
