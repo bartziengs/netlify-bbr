@@ -16,17 +16,17 @@ export const IndexPageTemplate = ({
   selling_points,
   description,
 }) => (
-  <div>
+  <div className="content">
     <div
-      className="full-width-image margin-top-20"
+      className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundAttachment: `fixed`,
+        backgroundPosition: "center center",
       }}
     >
-      <div
+      {/* <div
         style={{
           display: "flex",
           height: "150px",
@@ -35,28 +35,32 @@ export const IndexPageTemplate = ({
           alignItems: "left",
           flexDirection: "column",
         }}
-      >
+      > */}
+      <div className="container has-text-centered">
         <h1
-          className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen header-home page-title"
+          className="is-size-4-mobile is-size-2-tablet is-size-1-widescreen header-home page-title my-1"
           style={{
             color: "white",
             lineHeight: "1",
             padding: "0.25em",
+            display: "inline-block",
           }}
         >
           {title}
         </h1>
         <h3
-          className="is-size-4-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title has-text-centered"
+          className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title my-0"
           style={{
             color: "white",
             lineHeight: "1",
             padding: "0.25em",
+            display: "inline-block",
           }}
         >
           {subheading}
         </h3>
       </div>
+      {/* </div> */}
     </div>
     <section className="section section--gradient">
       <div className="container">
