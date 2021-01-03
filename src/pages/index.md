@@ -48,12 +48,12 @@ certifications:
 main:
   heading: Een indruk van de salon
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
+    alt: De stoel tijdens de feestdagen
     image: /img/bbr2.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
+    alt: Ontvangsthal
     image: /img/bbr5.jpg
   image3:
-    alt: Coffee beans
+    alt: Producten
     image: /img/bbr7.jpg
 ---
