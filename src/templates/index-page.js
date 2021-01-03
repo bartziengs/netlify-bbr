@@ -3,16 +3,17 @@ import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
+import SellingPoints from '../components/SellingPoints'
+import {  graphql } from "gatsby";
 
 export const IndexPageTemplate = ({
   image,
   title,
   main,
+  certifications,
   subheading,
-  // mainpitch,
   selling_points,
   description,
-  // intro,
 }) => (
   <div>
     <div
@@ -37,9 +38,6 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen header-home page-title"
           style={{
-            // boxShadow:
-            //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
-            // backgroundColor: 'rgb(74, 68, 68)',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -50,9 +48,6 @@ export const IndexPageTemplate = ({
         <h3
           className="is-size-4-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title has-text-centered"
           style={{
-            // boxShadow:
-            //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
-            // backgroundColor: 'rgb(74, 68, 68)',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -72,12 +67,11 @@ export const IndexPageTemplate = ({
                   <p className="is-size-5">{description}</p>
                 </div>
               </div>
-              <div className="columns">
+              {/* <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
                     {selling_points.title}
                   </h3>
-                  {/* list */}
                   <ul style={{ listStyle: 'inside', paddingLeft: '0.5rem' }}>
                     {selling_points.points.map((item) => (
                       <li key={item.text} style={{ paddingBottom: '0.3rem' }}>
@@ -86,7 +80,8 @@ export const IndexPageTemplate = ({
                     ))}
                   </ul>
                 </div>
-              </div>
+              </div> */}
+              <SellingPoints title={selling_points.title} sellingpoints={selling_points.points} />
               <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
@@ -139,6 +134,7 @@ IndexPageTemplate.propTypes = {
     title: PropTypes.string,
     products: PropTypes.array,
   }),
+  certifications: PropTypes.array,
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -161,6 +157,7 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         selling_points={frontmatter.selling_points}
         main={frontmatter.main}
+        certifications={frontmatter.certifications}
       />
     </Layout>
   )
@@ -200,6 +197,17 @@ export const pageQuery = graphql`
           title
           points {
             text
+          }
+        }
+        certifications {
+          description
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
         main {
