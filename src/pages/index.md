@@ -3,7 +3,7 @@ templateKey: index-page
 title: SCHOONHEIDSSALON BEAUTY BLOCK
 image: /img/img-20201231-wa0008.jpg
 heading: Great coffee with a conscience
-subheading: ___Inner Beauty is your job, Beauty Block does the rest___
+subheading: Inner Beauty is your job, Beauty Block does the rest
 description: Staat voor kwaliteit, en persoonlijk contact en ontspanning. Een
   prachtige salon gevestigd midden in het centrum van Rosmalen, gespecialiseerd
   in huidverzorging en huidverbetering met kwalitatieve en betaalbare
@@ -36,6 +36,15 @@ selling_points:
         Gratis parkeren
     - text: |
         Midden in het centrum Rosmalen
+certifications:
+    heading: Diplomas en Certificeringen
+    description: |
+        Onderstaande diplomas en certificeringen zijn behaald ter garantie van de kwaliteit
+    certifications:
+        -   product_title: Anbos
+            text: |
+                Beauty Block is aangesloten bij Anbos.  Anbos is de brancheorganisatie van gediplomeerde schoonheidsspecialisten. Behartigt als business partner de belangen van haar leden op kwaliteit, vakinhoud en ondernemerschap.
+            image: /img/anbos.png
 main:
   heading: Een indruk van de salon
   image1:

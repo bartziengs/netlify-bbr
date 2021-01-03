@@ -56,12 +56,12 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-4">
+              <div className="column ">
                 <section>
                   <OpeningHours />
                 </section>
               </div>
-              <div className="column is-4 social">
+              <div className="column social">
                 <a
                   title="facebook"
                   href="https://www.facebook.com/pages/category/Beauty-Salon/Beauty-Block-219292342197905/"

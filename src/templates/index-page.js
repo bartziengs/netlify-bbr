@@ -1,18 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
+import React from "react";
+import PropTypes from "prop-types";
+import Layout from "../components/Layout";
+import BlogRoll from "../components/BlogRoll";
+import SellingPoints from "../components/SellingPoints";
+import { graphql } from "gatsby";
+import PhotoGrid from "../components/Photogrid";
+import Certifications from "../components/Certifications";
 
 export const IndexPageTemplate = ({
   image,
   title,
   main,
+  certifications,
   subheading,
-  // mainpitch,
   selling_points,
   description,
-  // intro,
 }) => (
   <div>
     <div
@@ -26,23 +28,20 @@ export const IndexPageTemplate = ({
     >
       <div
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          display: "flex",
+          height: "150px",
+          lineHeight: "1",
+          justifyContent: "space-around",
+          alignItems: "left",
+          flexDirection: "column",
         }}
       >
         <h1
           className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen header-home page-title"
           style={{
-            // boxShadow:
-            //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
-            // backgroundColor: 'rgb(74, 68, 68)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em",
           }}
         >
           {title}
@@ -50,12 +49,9 @@ export const IndexPageTemplate = ({
         <h3
           className="is-size-4-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title has-text-centered"
           style={{
-            // boxShadow:
-            //   'rgb(74, 68, 68) 0.5rem 0px 0px, rgb(74, 68, 68) -0.5rem 0px 0px',
-            // backgroundColor: 'rgb(74, 68, 68)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em",
           }}
         >
           {subheading}
@@ -64,7 +60,7 @@ export const IndexPageTemplate = ({
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
+        <div className="section py-1">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="columns">
@@ -72,55 +68,28 @@ export const IndexPageTemplate = ({
                   <p className="is-size-5">{description}</p>
                 </div>
               </div>
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {selling_points.title}
-                  </h3>
-                  {/* list */}
-                  <ul style={{ listStyle: 'inside', paddingLeft: '0.5rem' }}>
-                    {selling_points.points.map((item) => (
-                      <li key={item.text} style={{ paddingBottom: '0.3rem' }}>
-                        {item.text}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
+              <SellingPoints
+                title={selling_points.title}
+                sellingpoints={selling_points.points}
+              />
+            </div>
+          </div>
+        </div>
+        <Certifications data={certifications} />
 
-              <div className="column is-12">
-                <h3 className="has-text-weight-semibold is-size-2">
-                  Laatste nieuws
-                </h3>
-                <BlogRoll />
+        <PhotoGrid data={main} />
+
+        {/* LAATSTE NIEUWS */}
+        <div className="section py-1">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="columns">
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-3">
+                    Laatste nieuws
+                  </h3>
+                  <BlogRoll />
+                </div>
               </div>
             </div>
           </div>
@@ -128,7 +97,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
   </div>
-)
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -139,6 +108,7 @@ IndexPageTemplate.propTypes = {
     title: PropTypes.string,
     products: PropTypes.array,
   }),
+  certifications: PropTypes.object,
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -146,10 +116,10 @@ IndexPageTemplate.propTypes = {
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
-}
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -161,10 +131,11 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         selling_points={frontmatter.selling_points}
         main={frontmatter.main}
+        certifications={frontmatter.certifications}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -172,9 +143,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -200,6 +171,21 @@ export const pageQuery = graphql`
           title
           points {
             text
+          }
+        }
+        certifications {
+          description
+          heading
+          certifications {
+            product_title
+            text
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
         main {
@@ -238,4 +224,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
