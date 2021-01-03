@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
-class BlogRoll extends React.Component {
+export const BlogRoll = class BlogRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -69,7 +69,7 @@ BlogRoll.propTypes = {
   }),
 };
 
-let blogPostQuery = graphql`
+export const blogPostQuery = graphql`
   query BlogRollQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -100,13 +100,6 @@ let blogPostQuery = graphql`
     }
   }
 `;
-
-export const HomePageBlogRoll = () => (
-  <StaticQuery
-    query={blogPostQuery}
-    render={(data)  => <BlogRoll data={data} forHomePage={true} />}
-  />
-);
 
 export const FullBlogRoll = () => (
   <StaticQuery

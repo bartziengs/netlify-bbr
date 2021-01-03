@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/Layout";
-import { HomePageBlogRoll} from "../components/BlogRoll";
 import SellingPoints from "../components/SellingPoints";
 import { graphql } from "gatsby";
 import PhotoGrid from "../components/Photogrid";
 import Certifications from "../components/Certifications";
+import { HomePageBlogRoll } from "../components/HomePageBlogRoll";
 
 export const IndexPageTemplate = ({
   image,
