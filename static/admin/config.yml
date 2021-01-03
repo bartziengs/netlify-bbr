@@ -43,6 +43,7 @@ collections:
           - {label: Subheading, name: subheading, widget: string}
           - {label: Description, name: description, widget: text}
           - {label: Opsomming, name: selling_points, widget: object, fields: [{label: Titel, name: title, widget: string}, {label: Punten, name: points, widget: list, field: {label: punt, name: text, widget: string} }]}
+          - {label: Certificeringen, name: certifications, widget: object, fields: [{label: Titel, name: heading, widget: string}, {label: Beschrijving, name: description, widget: string}, {label: Certificeringen, name: certifications, widget: list, fields: [{label: Titel, name: product_title, widget: text},{label: Plaatje, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Fotos, name: main, widget: object, fields: [{label: Titel, name: heading, widget: string},{label: Foto1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Foto2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Foto3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
       - file: "src/pages/producten/index.md"
         label: "Producten"
