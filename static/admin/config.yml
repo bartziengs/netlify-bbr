@@ -18,6 +18,7 @@ collections:
   - name: "blog"
     label: "Nieuws"
     folder: "src/pages/nieuws"
+    filter: {field: "templateKey", value: "blog-post"}
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
