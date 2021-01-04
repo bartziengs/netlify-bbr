@@ -6,7 +6,7 @@ image: /img/bbr2.jpg
 facial:
   title: Gezichtsbehandelingen
   treatments:
-    - title: Basis Behandeling Payot
+    - title: Basis gezichtsbehandeling Payot
       price: 60
       duration: 60
       description: >
@@ -15,7 +15,7 @@ facial:
         decolleté-rug/nekmassage, masker, vitamine
         serum,                                             oogverzorging en
         dag/nacht verzorging.
-    - title: Pureté Essentiëlle behandeling Payot
+    - title: Pureté Essentiëlle gezichtsbehandeling Payot
       price: 65
       duration: 70
       description: >
@@ -24,7 +24,7 @@ facial:
         gecombineerde tot vette huid. Verwijdert
         onzuiverheden                                  en brengt balans in de
         talgafscheiding. Voor een intens schone, matte en vlekkeloze huid.
-    - title: Hydratation Essentiëlle
+    - title: Hydratation Essentiëlle gezichtsbehandeling
       price: 65
       duration: 70
       description: >
@@ -33,7 +33,7 @@ facial:
         Vochtherstellende behandeling die direct en langdurig
         het                                       vochtgehalte verbetert. Voor
         een vollere en van gezondheid stralend, soepele huid.
-    - title: Douceur Essentielle
+    - title: Douceur Essentielle gezichtsbehandeling
       price: 65
       duration: 70
       description: >
@@ -44,7 +44,7 @@ facial:
 other:
   title: Behandelingen
   treatments:
-    - title: Derma Peel Pro Fruitzuur behandeling
+    - title: Derma Peel Pro Fruitzuur gezichtsbehandeling
       price: 75
       duration: 60
       description: >
@@ -53,7 +53,7 @@ other:
         DermaPeelPro is ontwikkeld om een diepgaande, intense peeling te geven,
         die vergelijkbaar is met de peeling behandelingen die uitgevoerd worden
         in medische klinieken.     Wordt ook in kuur behandeling aangeboden:
-        kUUR : 3 Behandelingen voor €  195,--  i.p.v €  225,--
+        KUUR : 3 Behandelingen voor €  195,--  i.p.v €  225,--
     - title: Acne behandeling
       price: 60
       duration: 60

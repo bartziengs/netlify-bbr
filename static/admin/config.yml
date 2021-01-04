@@ -68,6 +68,15 @@ collections:
           - {label: Behandelingen, name: other, widget: object, fields: [{label: Titel, name: title, widget: string}, {label: Behandelingen, name: treatments, widget: list, fields: [{label: Naam, name: title, widget: string},{label: Prijs, name: price, widget: number},{label: Duur, name: duration, widget: number},{label: Beschrijving, name: description, widget: text}]}]}
           - {label: Ontharen, name: hairremoval, widget: list, fields: [{label: Behandeling, name: description, widget: string}, {label: Prijs, name: price, widget: number}]}
           - {label: Losse Behandelingen, name: single, widget: list, fields: [{label: Behandeling, name: description, widget: string}, {label: Prijs, name: price, widget: number}]}
+      - file: "src/pages/nieuws/index.md"
+        label: "Nieuws"
+        name: "news"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-page"}
+          - {label: Titel, name: title, widget: string}
+          - {label: Plaatje, name: image, widget: image}
+          - {label: Koptekst, name: header, widget: string}
+          - {label: Beschrijving, name: description, widget: text}
   
   - name: "info"
     label: "Informatie"
