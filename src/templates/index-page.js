@@ -24,21 +24,11 @@ export const IndexPageTemplate = ({
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: "center center",
+        flexDirection: "column"
       }}
     >
-      {/* <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column",
-        }}
-      > */}
-      <div className="container has-text-centered">
         <h1
-          className="is-size-4-mobile is-size-2-tablet is-size-1-widescreen header-home page-title my-1"
+          className="is-size-4-mobile is-size-2-tablet is-size-1-widescreen header-home page-title my-1 has-text-centered"
           style={{
             color: "white",
             lineHeight: "1",
@@ -49,7 +39,7 @@ export const IndexPageTemplate = ({
           {title}
         </h1>
         <h3
-          className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title my-0"
+          className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title my-0 has-text-centered"
           style={{
             color: "white",
             lineHeight: "1",
@@ -59,8 +49,6 @@ export const IndexPageTemplate = ({
         >
           {subheading}
         </h3>
-      </div>
-      {/* </div> */}
     </div>
     <section className="section section--gradient">
       <div className="container">
@@ -160,7 +148,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1024, quality: 50) {
               ...GatsbyImageSharpFluid
             }
           }
