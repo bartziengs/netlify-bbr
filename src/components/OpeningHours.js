@@ -1,42 +1,36 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import moment from 'moment'
-import { graphql, StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from "gatsby";
 
-const OpeningHours = class extends React.Component {
-  render = () => {
-    const { days } = this.props
+import PropTypes from "prop-types";
+import React from "react";
+import moment from "moment";
 
-    return (
-      <div className="opening-hours has-text-left columns is-centered is-mobile">
-        <table className="table is-narrow column">
-          <tbody>
-            {days.map((day) =>
-              !day.closed ? (
-                <tr key={day.day}>
-                  <td>{day.day}</td>
-                  <td>{moment(day.from).format('HH:mm')}</td>
-                  <td>-</td>
-                  <td>{moment(day.to).format('HH:mm')}</td>
-                </tr>
-              ) : (
-                <tr key={day.day}>
-                  <td>{day.day}</td>
-                  <td colSpan="3">gesloten</td>
-                </tr>
-              )
-            )}
-          </tbody>
-        </table>
-      </div>
-    )
-  }
-}
+const OpeningHours = ({ days }) => (
+  <div className="opening-hours has-text-left columns is-centered is-mobile">
+    <table className="table is-narrow column">
+      <tbody>
+        {days.map((day) =>
+          !day.closed ? (
+            <tr key={day.day}>
+              <td>{day.day}</td>
+              <td>{moment(day.from).format("HH:mm")}</td>
+              <td>-</td>
+              <td>{moment(day.to).format("HH:mm")}</td>
+            </tr>
+          ) : (
+            <tr key={day.day}>
+              <td>{day.day}</td>
+              <td colSpan="3">gesloten</td>
+            </tr>
+          )
+        )}
+      </tbody>
+    </table>
+  </div>
+);
 
 OpeningHours.propTypes = {
-  days: PropTypes.array
-}
-
+  days: PropTypes.array,
+};
 
 export default () => (
   <StaticQuery
@@ -70,4 +64,4 @@ export default () => (
       />
     )}
   />
-)
+);

@@ -1,5 +1,6 @@
-import { BlogRoll } from "./BlogRoll";
 import { StaticQuery, graphql } from "gatsby";
+
+import { BlogRoll } from "./BlogRoll";
 import React from "react";
 
 const homePageBlogQuery = graphql`
@@ -35,9 +36,11 @@ const homePageBlogQuery = graphql`
   }
 `;
 
-export const HomePageBlogRoll = () => (
+const HomePageBlogRoll = () => (
   <StaticQuery
     query={homePageBlogQuery}
-    render={(data)  => <BlogRoll data={data} />}
+    render={(data) => <BlogRoll data={data} />}
   />
 );
+
+export default HomePageBlogRoll;
