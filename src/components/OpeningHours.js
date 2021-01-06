@@ -45,7 +45,6 @@ export default () => (
             node {
               id
               frontmatter {
-                templateKey
                 openinghours {
                   closed
                   day

@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Treatments  from "../components/Treatments";
 import PriceList from '../components/PriceList';
+import PropTypes from 'prop-types'
+import React from 'react'
+import Treatments  from "../components/Treatments";
+import { graphql } from 'gatsby'
 
 export const TreatmentPageTemplate = ({
   image,
@@ -20,7 +20,7 @@ export const TreatmentPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: 'right center',
+        backgroundPosition: 'center center',
       }}
     >
       <h2
@@ -98,7 +98,7 @@ export const treatmentPageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1920, quality: 50) {
               ...GatsbyImageSharpFluid
             }
           }
