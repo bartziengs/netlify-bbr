@@ -37,23 +37,31 @@ selling_points:
     - text: |
         Midden in het centrum Rosmalen
 certifications:
-    heading: Diplomas en Certificeringen
-    description: |
-        Onderstaande diplomas en certificeringen zijn behaald ter garantie van de kwaliteit
-    certifications:
-        -   product_title: Anbos
-            text: |
-                Beauty Block is aangesloten bij Anbos.  Anbos is de brancheorganisatie van gediplomeerde schoonheidsspecialisten. Behartigt als business partner de belangen van haar leden op kwaliteit, vakinhoud en ondernemerschap.
-            image: /img/anbos.png
+  heading: Diplomas en Certificeringen
+  description: >
+    Onderstaande diplomas en certificeringen zijn behaald ter garantie van de
+    kwaliteit
+  certifications:
+    - product_title: Anbos
+      text: >
+        Beauty Block is aangesloten bij Anbos.  Anbos is de brancheorganisatie
+        van gediplomeerde schoonheidsspecialisten. Behartigt als business
+        partner de belangen van haar leden op kwaliteit, vakinhoud en
+        ondernemerschap.
+      image: /img/anbos.png
+    - product_title: GGD
+      image: /img/ggd.jpg
+      text: Bij Beauty Block wordt gewerkt volgens de juiste hygiëne richtlijnen en
+        protocol
 main:
   heading: Een indruk van de salon
   image1:
-    alt: De stoel tijdens de feestdagen
-    image: /img/bbr2.jpg
+    alt: Behandel ruimte
+    image: /img/stoel.jpg
   image2:
-    alt: Ontvangsthal
-    image: /img/bbr5.jpg
+    alt: Ontvangst ruimte
+    image: /img/ontvangst.jpg
   image3:
     alt: Producten
-    image: /img/bbr7.jpg
+    image: /img/other2.jpg
 ---
