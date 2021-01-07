@@ -54,7 +54,7 @@ payot:
         UVB straling. Met duurzame ingrediënten is deze zonnelijn zo ontwikkeld
         om het milieu zo min mogelijk aan te tasten. Verkrijgbaar in SPF 15, 30
         en 50.
-      image: /img/logo-sunny.jpg
+      image: /img/payot7.png
   heading: Huidverzorgingslijn van Payot
   description: |
     Onderstaande Payot producten zijn verkrijgbaar in mijn salon

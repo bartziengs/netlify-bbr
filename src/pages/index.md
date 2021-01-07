@@ -59,9 +59,9 @@ main:
     alt: Behandel ruimte
     image: /img/stoel.jpg
   image2:
-    alt: Ontvangst ruimte
-    image: /img/ontvangst.jpg
-  image3:
     alt: Producten
     image: /img/other2.jpg
+  image3:
+    alt: Ontvangst ruimte
+    image: /img/ontvangst.jpg
 ---
