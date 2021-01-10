@@ -2,7 +2,7 @@
 templateKey: product-page
 path: /producten
 title: Producten
-image: /img/bbr7.jpg
+image: /img/foto-prijslijst.png
 payot:
   products:
     - image: /img/payot1.png
