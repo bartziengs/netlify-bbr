@@ -2,7 +2,7 @@
 templateKey: treatment-page
 path: /producten
 title: Behandelingen
-image: /img/bbr2.jpg
+image: /img/stoel.jpg
 facial:
   title: Gezichtsbehandelingen
   treatments:
