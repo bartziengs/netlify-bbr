@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: SCHOONHEIDSSALON BEAUTY BLOCK
-image: /img/logo.jpg
+image: /img/img_8136.jpg
 heading: Great coffee with a conscience
 subheading: Inner Beauty is your job, Beauty Block does the rest
 description: Staat voor kwaliteit, en persoonlijk contact en ontspanning. Een
