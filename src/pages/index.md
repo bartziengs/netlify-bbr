@@ -66,7 +66,7 @@ main:
     image: /img/stoel.jpg
   image2:
     alt: Producten
-    image: /img/other2.jpg
+    image: /img/foto-innerbeauty.jpg
   image3:
     alt: Ontvangst ruimte
     image: /img/ontvangst.jpg
