@@ -43,16 +43,22 @@ certifications:
     kwaliteit
   certifications:
     - product_title: Anbos
-      text: >
+      text: >-
         Beauty Block is aangesloten bij Anbos.  Anbos is de brancheorganisatie
-        van gediplomeerde schoonheidsspecialisten. Behartigt als business
-        partner de belangen van haar leden op kwaliteit, vakinhoud en
-        ondernemerschap.
+        van gediplomeerde schoonheidsspecialisten. Is de salon aangesloten bij
+        de Anbos dan weet je zeker dat de schoonheidsspecialist over de juiste
+        erkende vakdiploma's beschikt en zich houden aan de richtlijnen voor
+        Hygiëne, Arbeid en Milieu. 
+
+        Kies bewust zodat je verzekerd bent van professionele behandelingen.
       image: /img/anbos.png
     - product_title: GGD
       image: /img/ggd.jpg
-      text: Bij Beauty Block wordt gewerkt volgens de juiste hygiëne richtlijnen en
-        protocol
+      text: >-
+        Beauty Block is in het bezit van een GGD Vergunning waar wordt gewerkt
+        volgens de juiste hygiëne richtlijnen en protocol.
+
+        Huidspecialisten welke werken met permanente make-up zijn verplicht een GGD vergunning te hebben. Kies bewust zodat je verzekerd bent van professionele behandelingen.
 main:
   heading: Een indruk van de salon
   image1:
@@ -60,7 +66,7 @@ main:
     image: /img/stoel.jpg
   image2:
     alt: Producten
-    image: /img/other2.jpg
+    image: /img/foto-innerbeauty.jpg
   image3:
     alt: Ontvangst ruimte
     image: /img/ontvangst.jpg
