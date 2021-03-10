@@ -6,10 +6,6 @@ description: Vanaf heden kun je mijn salon volgen via deze website
 featuredpost: true
 featuredimage: /img/jessie.jpg
 tags:
-  - kersts
+  - live
 ---
 We zijn live!
-
-Vrolijk kerstfeest iedereen!
-
-Dit is Isa's addition
