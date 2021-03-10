@@ -10,4 +10,4 @@ tags:
 ---
 Schoonheid is aangeboren maar stijl is te koop!
 
-![mooie tas](/img/bbr6.jpg "Dit is mijn zus")
+![](/img/bbr6.jpg)
