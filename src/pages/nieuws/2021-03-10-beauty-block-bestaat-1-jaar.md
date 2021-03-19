@@ -4,7 +4,7 @@ title: Beauty Block bestaat 1 jaar!
 date: 2020-03-14T19:12:30.293Z
 description: |
   Een bijzondere dag voor BEAUTY BLOCK
-featuredpost: "true"
+featuredpost: true
 featuredimage: /img/jessica-salon-1-jaar.jpg
 tags:
   - eenjarigbestaan
