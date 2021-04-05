@@ -10,18 +10,18 @@ tags:
 ---
 Schoonheidssalon Beauty Block\
 \
-Weet jij al welke schoonheidsbehandelingen Beauty Block aanbiedt? ![⤵️](https://static.xx.fbcdn.net/images/emoji.php/v9/t19/1.5/16/2935.png)
+Weet jij al welke schoonheidsbehandelingen Beauty Block aanbiedt? 
 
-* diverse gezichtsbehandelingen\
-* fruitzuur peeling\
+* diverse gezichtsbehandelingen
+* fruitzuur peeling
 * acné behandeling\
-  (indienen bij zorgverzekering is mogelijk)\
-* epileren met touw / wax / pincet \
-* gezicht + lichaamsontharing \
-* ombré powderbrows / SPMU\
-* henna brows \
-* bindweefselmassage\
-* rugmassage \
+  (indienen bij zorgverzekering is mogelijk)
+* epileren met touw / wax / pincet 
+* gezicht + lichaamsontharing 
+* ombré powderbrows / SPMU
+* henna brows 
+* bindweefselmassage
+* rugmassage 
 * gezichtsmassage \
   \
   Meer info of het maken van een afspraak? \
