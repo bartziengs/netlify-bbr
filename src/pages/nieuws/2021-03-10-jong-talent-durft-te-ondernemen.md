@@ -9,3 +9,5 @@ tags:
   - krantartikel
 ---
 **Beauty Block staat in de Rosbode!**
+
+![](/img/jessica-salon.jpg)
