@@ -7,16 +7,16 @@ facial:
   title: Gezichtsbehandelingen
   treatments:
     - title: Basis gezichtsbehandeling Payot
-      price: 60
+      price: 65
       duration: 60
       description: >
         Huidanalyse, oppervlakte reiniging, diepte reiniging, onzuiverheden
         verwijderen,                                    epileren,  gelaat-
         decolleté-rug/nekmassage, masker, vitamine
         serum,                                             oogverzorging en
-        dag/nacht verzorging.
+        dag/nacht verzorging inclusief super shot.
     - title: Pureté Essentiëlle gezichtsbehandeling Payot
-      price: 65
+      price: 70
       duration: 70
       description: >
         Zoals beschreven bij de Basis Behandeling met een extra peeling (die
@@ -25,7 +25,7 @@ facial:
         onzuiverheden                                  en brengt balans in de
         talgafscheiding. Voor een intens schone, matte en vlekkeloze huid.
     - title: Hydratation Essentiëlle gezichtsbehandeling
-      price: 65
+      price: 70
       duration: 70
       description: >
         Zoals beschreven bij de Basis behandeling met een extra masker voor
@@ -34,7 +34,7 @@ facial:
         het                                       vochtgehalte verbetert. Voor
         een vollere en van gezondheid stralend, soepele huid.
     - title: Douceur Essentielle gezichtsbehandeling
-      price: 65
+      price: 70
       duration: 70
       description: >
         Zoals beschreven bij de Basis Behandeling met een extra masker voor de
@@ -45,7 +45,7 @@ other:
   title: Behandelingen
   treatments:
     - title: Derma Peel Pro Fruitzuur gezichtsbehandeling
-      price: 75
+      price: 80
       duration: 60
       description: >
         DermaPeelPro van Skeyndor is de nieuwste generatie cosmeceutische
@@ -53,7 +53,7 @@ other:
         DermaPeelPro is ontwikkeld om een diepgaande, intense peeling te geven,
         die vergelijkbaar is met de peeling behandelingen die uitgevoerd worden
         in medische klinieken.     Wordt ook in kuur behandeling aangeboden:
-        KUUR : 3 Behandelingen voor €  195,--  i.p.v €  225,--
+        KUUR : 3 Behandelingen voor €  210,--  i.p.v €  240,--
     - title: Acne behandeling
       price: 60
       duration: 60
@@ -89,16 +89,6 @@ other:
         deze  behandeling is dat het nagenoeg geschikt is voor iedereen en in
         elke gewenste kleur + vorm. Het resultaat blijft gemiddeld 1 ½ tot 2
         jaar mooi en goed zichtbaar. 
-    - title: Henna Brows inclusief shapen
-      price: 45
-      duration: 30
-      description: >
-        Henna Brows is een vorm van wenkbrauwen verven die wordt gebruikt om de
-        huid onder de wenkbrauw te verdonkeren. Henna is een natuurlijke
-        kleurstof gemaakt van een plant. Dit is een nieuwe zeer populaire manier
-        van wenkbrauwen verven zonder ammoniak of waterstofperoxide. Met Henna
-        kunnen we elke wenkbrauw in elke gewenste kleur verven. Henna blijft 2
-        weken op de huid en 5/6 weken op de haartjes.
 hairremoval:
   - description: Onderbenen
     price: 25
@@ -109,7 +99,7 @@ hairremoval:
   - description: Onderarmen (inclusief handen)
     price: 25
   - description: Bikinilijn
-    price: 20
+    price: 25
   - description: Buik
     price: 25
   - description: Borst
@@ -124,15 +114,15 @@ hairremoval:
     price: 15
 single:
   - description: Wenkbrauwen epileren (keuze uit; touw, pincet of wax)
-    price: 10
+    price: 12
   - description: Wenkbrauwen verven
-    price: 10
+    price: 12
   - description: Wimpers verven
-    price: 10
+    price: 12
   - description: Handpakking
     price: 5
   - description: Rugmassage (30 min)
-    price: 30
-  - description: Gelaat/decolleté en rug-rug massage  (30 min)
-    price: 30
+    price: 35
+  - description: Gelaat/decolleté en nek massage  (30 min)
+    price: 35
 ---
