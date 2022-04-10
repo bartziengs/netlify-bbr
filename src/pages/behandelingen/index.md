@@ -55,7 +55,7 @@ other:
         in medische klinieken.     Wordt ook in kuur behandeling aangeboden:
         KUUR : 3 Behandelingen voor €  210,--  i.p.v €  240,--
     - title: Acne behandeling
-      price: 60
+      price: 65
       duration: 60
       description: >
         Met een acne behandeling worden oneffenheden en littekens behandeld. Om
@@ -66,8 +66,8 @@ other:
         resultaat te behouden. Wij werken samen met zorgverzekeraars zodat
         behandelingen vergoed kunnen worden.
     - title: Bindweefsel massage
-      price: 65
-      duration: 70
+      price: 40
+      duration: 30
       description: >
         Cosmetische bindweefsel massage is één van de populairste huid
         verbeterende behandelingen. De behandeling verhoogt de doorbloeding en
@@ -107,11 +107,11 @@ hairremoval:
   - description: Rug
     price: 30
   - description: Bovenlip incl. Kin
-    price: 10
+    price: 12
   - description: Kaaklijn
-    price: 10
+    price: 12
   - description: Kaaklijn + Wangen
-    price: 15
+    price: 17
 single:
   - description: Wenkbrauwen epileren (keuze uit; touw, pincet of wax)
     price: 12
