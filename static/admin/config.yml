@@ -64,10 +64,10 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "treatment-page"}
           - {label: Titel, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - {label: Gezichtsbehandelingen, name: facial, widget: object, fields: [{label: Titel, name: title, widget: string}, {label: Behandelingen, name: treatments, widget: list, fields: [{label: Naam, name: title, widget: string},{label: Prijs, name: price, widget: number},{label: Duur, name: duration, widget: number},{label: Beschrijving, name: description, widget: text}]}]}
-          - {label: Behandelingen, name: other, widget: object, fields: [{label: Titel, name: title, widget: string}, {label: Behandelingen, name: treatments, widget: list, fields: [{label: Naam, name: title, widget: string},{label: Prijs, name: price, widget: number},{label: Duur, name: duration, widget: number},{label: Beschrijving, name: description, widget: text}]}]}
-          - {label: Ontharen, name: hairremoval, widget: list, fields: [{label: Behandeling, name: description, widget: string}, {label: Prijs, name: price, widget: number}]}
-          - {label: Losse Behandelingen, name: single, widget: list, fields: [{label: Behandeling, name: description, widget: string}, {label: Prijs, name: price, widget: number, value_type: int}]}
+          - {label: Gezichtsbehandelingen, name: facial, widget: object, fields: [{label: Titel, name: title, widget: string}, {label: Behandelingen, name: treatments, widget: list, fields: [{label: Naam, name: title, widget: string},{label: Prijs, name: price, widget: number, value_type: float},{label: Duur, name: duration, widget: number},{label: Beschrijving, name: description, widget: text}]}]}
+          - {label: Behandelingen, name: other, widget: object, fields: [{label: Titel, name: title, widget: string}, {label: Behandelingen, name: treatments, widget: list, fields: [{label: Naam, name: title, widget: string},{label: Prijs, name: price, widget: number,value_type: float},{label: Duur, name: duration, widget: number},{label: Beschrijving, name: description, widget: text}]}]}
+          - {label: Ontharen, name: hairremoval, widget: list, fields: [{label: Behandeling, name: description, widget: string}, {label: Prijs, name: price, widget: number, value_type: float}]}
+          - {label: Losse Behandelingen, name: single, widget: list, fields: [{label: Behandeling, name: description, widget: string}, {label: Prijs, name: price, widget: number, value_type: float }]}
       - file: "src/pages/nieuws/index.md"
         label: "Nieuws"
         name: "news"
