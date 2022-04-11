@@ -45,7 +45,7 @@ other:
   title: Behandelingen
   treatments:
     - title: Derma Peel Pro Fruitzuur gezichtsbehandeling
-      price: 80
+      price: 82.5
       duration: 60
       description: >
         DermaPeelPro van Skeyndor is de nieuwste generatie cosmeceutische
@@ -114,11 +114,11 @@ hairremoval:
     price: 17
 single:
   - description: Wenkbrauwen epileren (keuze uit; touw, pincet of wax)
-    price: 12
+    price: 12.5
   - description: Wenkbrauwen verven
-    price: 12
+    price: 14
   - description: Wimpers verven
-    price: 12
+    price: 12.5
   - description: Handpakking
     price: 5
   - description: Rugmassage (30 min)
