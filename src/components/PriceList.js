@@ -23,7 +23,7 @@ const PriceList = ({ title, treatments }) => (
             {treatments.map((item) => (
               <tr key={item.description}>
                 <td>{item.description}</td>
-                <td>€{item.price},-</td>
+                <td>€{item.price.toFixed(2).toString().replace('.00','')}</td>
               </tr>
             ))}
           </tbody>

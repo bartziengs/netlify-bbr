@@ -25,7 +25,7 @@ const Treatments = ({title, treatments}) => (
               <div className="message-body">
                 <p className="my-0">
                   <span className="has-text-weight-bold">Prijs: </span>€
-                  {treatment.price},-
+                  {treatment.price.toFixed(2).toString().replace('.00','')}
                 </p>
                 <p className="my-0">
                   <span className="has-text-weight-bold">Duur: </span>
