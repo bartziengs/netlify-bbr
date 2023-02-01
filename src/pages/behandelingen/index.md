@@ -44,16 +44,16 @@ facial:
 other:
   title: Behandelingen
   treatments:
-    - title: Derma Peel Pro Fruitzuur gezichtsbehandeling
-      price: 80
+    - title: Derma Prima Fruitzuur gezichtsbehandeling
+      price: 85
       duration: 60
       description: >
-        DermaPeelPro van Skeyndor is de nieuwste generatie cosmeceutische
-        peeling die onmiddellijk inwerkt op de imperfecties van de huid.
-        DermaPeelPro is ontwikkeld om een diepgaande, intense peeling te geven,
-        die vergelijkbaar is met de peeling behandelingen die uitgevoerd worden
-        in medische klinieken.     Wordt ook in kuur behandeling aangeboden:
-        KUUR : 3 Behandelingen voor €  210,--  i.p.v €  240,--
+        Derma Prime is de nieuwste generatie cosmeceutische peeling die
+        onmiddellijk inwerkt op de imperfecties van de huid. Derma Prime is
+        ontwikkeld om een diepgaande, intense peeling te geven om
+        hyperpigmentatie tegen te gaan en de huidstructuur te verbeteren. Deze
+        fruitzuurpeeling wordt ook in kuur behandeling aangeboden: KUUR : 4
+        Behandelingen voor €  300,--  i.p.v €  340,--
     - title: Acne behandeling
       price: 65
       duration: 60
