@@ -55,7 +55,7 @@ other:
         fruitzuurpeeling wordt ook in kuur behandeling aangeboden: KUUR : 4
         Behandelingen voor €  300,--  i.p.v €  340,--
     - title: Acne behandeling
-      price: 65
+      price: 70
       duration: 60
       description: >
         Met een acne behandeling worden oneffenheden en littekens behandeld. Om
@@ -91,7 +91,7 @@ other:
         jaar mooi en goed zichtbaar. 
 hairremoval:
   - description: Onderbenen
-    price: 25
+    price: 30
   - description: Bovenbenen
     price: 25
   - description: Oksels
@@ -105,22 +105,22 @@ hairremoval:
   - description: Borst
     price: 25
   - description: Rug
-    price: 30
+    price: 35
   - description: Bovenlip incl. Kin
-    price: 12.5
+    price: 13.5
   - description: Kaaklijn
-    price: 12.5
+    price: 13.5
   - description: Kaaklijn + Wangen
     price: 17.5
 single:
   - description: Wenkbrauwen epileren (keuze uit; touw, pincet of wax)
-    price: 12.5
+    price: 13.5
   - description: Wenkbrauwen verven
-    price: 12.5
+    price: 13.5
   - description: Wimpers verven
-    price: 12.5
+    price: 13.5
   - description: Handpakking
-    price: 5
+    price: 7
   - description: Rugmassage (30 min)
     price: 35
   - description: Gelaat/decolleté en nek massage  (30 min)
