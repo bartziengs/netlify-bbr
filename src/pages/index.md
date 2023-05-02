@@ -63,11 +63,11 @@ main:
   heading: Een indruk van de salon
   image1:
     alt: Behandel ruimte
-    image: /img/stoel.jpg
+    image: /img/salon.jpg
   image2:
     alt: Producten
     image: /img/img_8136.jpg
   image3:
     alt: Ontvangst ruimte
-    image: /img/ontvangst.jpg
+    image: /img/diplomas.jpg
 ---
