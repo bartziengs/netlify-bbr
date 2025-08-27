@@ -4,12 +4,11 @@ import React from "react";
 import { graphql } from 'gatsby'
 
 const BlogIndexPageTemplate = ({ description, header, title, image }) => (
-    <>
+  <>
     <div
       className="full-width-image-container margin-top-0"
       style={{
-        backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
         backgroundPosition: "center center",
       }}
@@ -29,16 +28,16 @@ const BlogIndexPageTemplate = ({ description, header, title, image }) => (
       <div className="container">
         <div className="content">
           <div className="columns is-multiline">
-              <div className ="column is-12">
-                  <h2>{header}</h2>
-                  <p>{description}</p>
-              </div>
+            <div className="column is-12">
+              <h2>{header}</h2>
+              <p>{description}</p>
+            </div>
             <FullBlogRoll />
           </div>
         </div>
       </div>
     </section>
-    </>
+  </>
 );
 
 const BlogIndexPage = ({ data }) => {

@@ -20,35 +20,34 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image-container margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         backgroundPosition: "center center",
         flexDirection: "column"
       }}
     >
-        <h1
-          className="is-size-4-mobile is-size-2-tablet is-size-1-widescreen header-home page-title my-1 has-text-centered"
-          style={{
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
-            display: "inline-block",
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title my-0 has-text-centered"
-          style={{
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
-            display: "inline-block",
-          }}
-        >
-          {subheading}
-        </h3>
+      <h1
+        className="is-size-4-mobile is-size-2-tablet is-size-1-widescreen header-home page-title my-1 has-text-centered"
+        style={{
+          color: "white",
+          lineHeight: "1",
+          padding: "0.25em",
+          display: "inline-block",
+        }}
+      >
+        {title}
+      </h1>
+      <h3
+        className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title my-0 has-text-centered"
+        style={{
+          color: "white",
+          lineHeight: "1",
+          padding: "0.25em",
+          display: "inline-block",
+        }}
+      >
+        {subheading}
+      </h3>
     </div>
     <section className="section section--gradient">
       <div className="container">
