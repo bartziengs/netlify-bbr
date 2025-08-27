@@ -35,31 +35,26 @@ OpeningHours.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query OpeningHoursQuery {
-        allMarkdownRemark(
-          filter: {
-            frontmatter: { templateKey: { eq: "no-page-openinghours" } }
-          }
-        ) {
-          edges {
-            node {
-              id
+        query OpeningHoursQuery {
+          allMarkdownRemark(
+            filter: {frontmatter: {templateKey: {eq: "no-page-openinghours"}}}
+          ) {
+            nodes {
               frontmatter {
                 openinghours {
                   closed
                   day
-                  from
                   to
+                  from
                 }
               }
             }
           }
         }
-      }
     `}
     render={(data) => (
       <OpeningHours
-        days={data.allMarkdownRemark.edges[0].node.frontmatter.openinghours}
+        days={data.allMarkdownRemark.nodes[0].frontmatter.openinghours}
       />
     )}
   />

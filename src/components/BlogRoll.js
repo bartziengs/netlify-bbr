@@ -4,7 +4,7 @@ import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import PropTypes from "prop-types";
 import React from "react";
 
-export const BlogRoll = ({ data}) => {
+export const BlogRoll = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
@@ -13,9 +13,8 @@ export const BlogRoll = ({ data}) => {
         posts.map(({ node: post }) => (
           <div className="is-parent column is-6" key={post.id}>
             <article
-              className={`h-100 blog-list-item tile is-child box notification ${
-                post.frontmatter.featuredpost ? "is-featured" : ""
-              }`}
+              className={`h-100 blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? "is-featured" : ""
+                }`}
             >
               <header>
                 {post.frontmatter.featuredimage ? (
@@ -24,6 +23,12 @@ export const BlogRoll = ({ data}) => {
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                        width:
+                          post.frontmatter.featuredimage.childImageSharp
+                            .gatsbyImageData.width,
+                        height:
+                          post.frontmatter.featuredimage.childImageSharp
+                            .gatsbyImageData.height,
                       }}
                     />
                   </div>
@@ -82,13 +87,16 @@ const blogPostQuery = graphql`
             templateKey
             date(formatString: "MMMM DD, YYYY")
             featuredpost
-            featuredimage {
-              childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+                  featuredimage {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 120
+                        quality: 100
+                        layout: CONSTRAINED
+                      )
+
+                    }
+                  }
           }
         }
       }

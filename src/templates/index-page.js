@@ -20,35 +20,34 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image-container margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         backgroundPosition: "center center",
         flexDirection: "column"
       }}
     >
-        <h1
-          className="is-size-4-mobile is-size-2-tablet is-size-1-widescreen header-home page-title my-1 has-text-centered"
-          style={{
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
-            display: "inline-block",
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title my-0 has-text-centered"
-          style={{
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em",
-            display: "inline-block",
-          }}
-        >
-          {subheading}
-        </h3>
+      <h1
+        className="is-size-4-mobile is-size-2-tablet is-size-1-widescreen header-home page-title my-1 has-text-centered"
+        style={{
+          color: "white",
+          lineHeight: "1",
+          padding: "0.25em",
+          display: "inline-block",
+        }}
+      >
+        {title}
+      </h1>
+      <h3
+        className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen header-sub page-title my-0 has-text-centered"
+        style={{
+          color: "white",
+          lineHeight: "1",
+          padding: "0.25em",
+          display: "inline-block",
+        }}
+      >
+        {subheading}
+      </h3>
     </div>
     <section className="section section--gradient">
       <div className="container">
@@ -142,75 +141,75 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
+query IndexPageTemplate {
+  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+    frontmatter {
+      title
+      image {
+        childImageSharp {
+          fluid(maxWidth: 1024, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      subheading
+      description
+      selling_points {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1024, quality: 50) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        points {
+          text
         }
-        subheading
+      }
+      selling_points {
+        title
+        points {
+          text
+        }
+      }
+      certifications {
         description
-        selling_points {
-          title
-          points {
-            text
-          }
-        }
-        selling_points {
-          title
-          points {
-            text
-          }
-        }
+        heading
         certifications {
-          description
-          heading
-          certifications {
-            product_title
-            text
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+          product_title
+          text
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 100, layout: CONSTRAINED)
+            }
+          }
+        }
+      }
+      main {
+        heading
+        image1 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
         }
-        main {
-          heading
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+        image2 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
+        }
+        image3 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 1075, quality: 72, layout: CONSTRAINED)
+              fluid(maxWidth: 1075, quality: 72) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -218,4 +217,6 @@ export const pageQuery = graphql`
       }
     }
   }
+}
+
 `;

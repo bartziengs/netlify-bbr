@@ -1,5 +1,4 @@
 @import "~bulma/sass/utilities/initial-variables"
-
 // import custom bell mt font for logo and headers
 @font-face
   font-family: "BellMT Bold"
@@ -20,7 +19,7 @@ $body-color: #333
 $black: #2b2523
 
 .navbar .navbar-menu
-  box-shadow:none !important
+  box-shadow: none !important
 
 .content .taglist
   list-style: none
@@ -103,6 +102,9 @@ $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
 
+// Import bulma only after the variables have been customized.
+@import "~bulma"
+
 .menu-label
   font-size: 1em !important
   text-align: left
@@ -123,13 +125,13 @@ $menu-label-color: $white-ter
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #69636033;
+  background-color: #69636033
 .blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
+  display: flex
+  margin-bottom: 1em
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  flex-basis: 35%
+  margin: 0 1.5em 0 0
 
 .logo
   font-family: "BellMT Bold"
@@ -172,12 +174,12 @@ $menu-label-color: $white-ter
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+    flex-basis: 50%
 
 +mobile
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+    text-align: center
+    max-width: 70%
+    margin: 0 0 1em

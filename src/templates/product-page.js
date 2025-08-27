@@ -15,9 +15,8 @@ export const ProductPageTemplate = ({
     <div
       className="full-width-image-container margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         backgroundPosition: 'center center',
       }}
     >
@@ -51,11 +50,10 @@ export const ProductPageTemplate = ({
         <div
           className="full-width-image-container"
           style={{
-            backgroundImage: `url(${
-              fullImage.childImageSharp
-                ? fullImage.childImageSharp.fluid.src
-                : fullImage
-            })`,
+            backgroundImage: `url(${fullImage.childImageSharp
+              ? fullImage.childImageSharp.fluid.src
+              : fullImage
+              })`,
             backgroundPositionY: '65%',
           }}
         />
@@ -134,9 +132,11 @@ export const productPageQuery = graphql`
             product_title
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+                    gatsbyImageData(
+                        width: 240
+                        quality: 64
+                        layout: CONSTRAINED
+                      )
               }
             }
             text
@@ -156,9 +156,11 @@ export const productPageQuery = graphql`
             product_title
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+                  gatsbyImageData(
+                        width: 240
+                        quality: 64
+                        layout: CONSTRAINED
+                      )
               }
             }
             text
