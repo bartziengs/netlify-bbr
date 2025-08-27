@@ -141,75 +141,75 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
+query IndexPageTemplate {
+  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+    frontmatter {
+      title
+      image {
+        childImageSharp {
+          fluid(maxWidth: 1024, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      subheading
+      description
+      selling_points {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1024, quality: 50) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        points {
+          text
         }
-        subheading
+      }
+      selling_points {
+        title
+        points {
+          text
+        }
+      }
+      certifications {
         description
-        selling_points {
-          title
-          points {
-            text
-          }
-        }
-        selling_points {
-          title
-          points {
-            text
-          }
-        }
+        heading
         certifications {
-          description
-          heading
-          certifications {
-            product_title
-            text
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+          product_title
+          text
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 100, layout: CONSTRAINED)
+            }
+          }
+        }
+      }
+      main {
+        heading
+        image1 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
         }
-        main {
-          heading
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+        image2 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              fluid(maxWidth: 526, quality: 92) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
+        }
+        image3 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 1075, quality: 72, layout: CONSTRAINED)
+              fluid(maxWidth: 1075, quality: 72) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -217,4 +217,6 @@ export const pageQuery = graphql`
       }
     }
   }
+}
+
 `;
