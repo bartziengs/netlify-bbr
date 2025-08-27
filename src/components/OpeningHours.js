@@ -44,23 +44,16 @@ export default () => (
           edges {
             node {
               id
-              frontmatter {
-                openinghours {
-                  closed
-                  day
-                  from
-                  to
-                }
-              }
             }
           }
         }
       }
     `}
     render={(data) => (
-      <OpeningHours
-        days={data.allMarkdownRemark.edges[0].node.frontmatter.openinghours}
-      />
+      <div>hallo</div>
+      // <OpeningHours
+      //   days={data.allMarkdownRemark.edges[0].node.frontmatter.openinghours}
+      // />
     )}
   />
 );

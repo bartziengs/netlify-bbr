@@ -1,5 +1,4 @@
 @import "~bulma/sass/utilities/initial-variables"
-
 // import custom bell mt font for logo and headers
 @font-face
   font-family: "BellMT Bold"
@@ -20,7 +19,7 @@ $body-color: #333
 $black: #2b2523
 
 .navbar .navbar-menu
-  box-shadow:none !important
+  box-shadow: none !important
 
 .content .taglist
   list-style: none
@@ -102,6 +101,9 @@ $menu-item-active-background-color:	$kaldi-red-invert
 $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
+
+// Import bulma only after the variables have been customized.
+@import "~bulma"
 
 .menu-label
   font-size: 1em !important
