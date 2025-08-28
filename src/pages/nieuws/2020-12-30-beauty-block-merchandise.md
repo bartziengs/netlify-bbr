@@ -4,11 +4,12 @@ title: Beauty Block merchandise
 date: 2020-12-30T18:40:49.110Z
 description: Zojuist hebben we de nieuwe Beauty Block handtas binnengekregen.
   Probeer hem nu!
-featuredpost: true
+featuredpost: false
 featuredimage: /img/bbr6.jpg
-tags:
-  - tas
+tags: []
 ---
-Schoonheid is aangeboren maar stijl is te koop.
+> Schoonheid is aangeboren maar stijl is te koop.
 
-![](/img/bbr6.jpg)
+![](/img/bbr6.jpg "De Beauty Block Tas")
+
+Koop hem nu in de salon!
