@@ -97,9 +97,9 @@ other:
         vergoed kunnen worden
 hairremoval:
   - description: Onderbenen
-    price: 30
+    price: 35
   - description: Bovenbenen
-    price: 30
+    price: 35
   - description: Oksels
     price: 35
   - description: Onderarmen (inclusief handen)
