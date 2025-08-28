@@ -131,4 +131,6 @@ single:
     price: 35
   - description: Gelaat/decolleté en nek massage  (30 min)
     price: 35
+  - description: nieuwe behandeling
+    price: 10
 ---
