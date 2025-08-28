@@ -7,7 +7,7 @@ facial:
   title: Gezichtsbehandelingen
   treatments:
     - title: Back to Basic Basis Gezichtsbehandeling
-      price: 65
+      price: 70
       duration: 60
       description: >-
         Huidanalyse, oppervlakte reiniging, diepte reiniging, onzuiverheden
@@ -101,11 +101,11 @@ hairremoval:
   - description: Bovenbenen
     price: 30
   - description: Oksels
-    price: 30
+    price: 35
   - description: Onderarmen (inclusief handen)
     price: 27.5
   - description: Bikinilijn
-    price: 27.5
+    price: 30
   - description: Buik
     price: 25
   - description: Borst
