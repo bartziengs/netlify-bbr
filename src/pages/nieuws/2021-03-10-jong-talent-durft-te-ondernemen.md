@@ -10,4 +10,10 @@ tags:
 ---
 **Beauty Block staat in de Rosbode!**
 
-![](/img/jessica-salon.jpg)
+**Zie hieronder het krantenartikel**
+
+
+
+![](/img/jessica-salon.jpg "rosbode")
+
+Artikel dateert uit 2020
