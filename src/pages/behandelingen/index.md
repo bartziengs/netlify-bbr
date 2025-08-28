@@ -7,7 +7,7 @@ facial:
   title: Gezichtsbehandelingen
   treatments:
     - title: Back to Basic Basis Gezichtsbehandeling
-      price: 65
+      price: 70
       duration: 60
       description: >-
         Huidanalyse, oppervlakte reiniging, diepte reiniging, onzuiverheden
