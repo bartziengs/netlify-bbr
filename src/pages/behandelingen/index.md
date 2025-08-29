@@ -14,12 +14,12 @@ facial:
         verwijderen,                                    epileren,  gelaat-
         decolleté-rug/nekmassage,
         masker                                             oogverzorging en
-        dag/nacht verzorging inclusief super shot.
+        dag/nacht verzorging met voedend masker.
 
-        Met extra voedend masker € 70,--
+        Met extra bindweefselmassage € 15,00
     - title: New Start Acné Behandeling Gezicht.
-      price: 70
-      duration: 45
+      price: 75
+      duration: 60
       description: >
         Met een acne behandeling worden oneffenheden en littekens behandeld. Om
         een optimaal resultaat te behalen werken wij met een behandelplan op
@@ -29,11 +29,10 @@ facial:
         resultaat te behouden. Wij werken samen met zorgverzekeraars zodat
         behandelingen vergoed kunnen worden.
 
-
-        Met extra massage. ( 60 min. )  € 75,--
+        Met ontspanningsmassage.
     - title: New Start Acné Behandeling Rug.
-      price: 70
-      duration: 45
+      price: 75
+      duration: 60
       description: >
         Met een acne behandeling worden oneffenheden en littekens behandeld. Om
         een optimaal resultaat te behalen werken wij met een behandelplan op
@@ -43,8 +42,7 @@ facial:
         resultaat te behouden. Wij werken samen met zorgverzekeraars zodat
         behandelingen vergoed kunnen worden.
 
-
-        Met extra massage ( 60 min. )  €  75,--
+        Met ontspanningsmassage.
     - title: Clear Skin Fruitzuur peeling.
       price: 85
       duration: 60
@@ -60,7 +58,7 @@ facial:
 other:
   title: Behandelingen
   treatments:
-    - title: Level up Hydrogen Led Facial
+    - title: Level up Hydrogen Led Facial. Booster behandeling.
       price: 95
       duration: 60
       description: >
