@@ -15,8 +15,6 @@ selling_points:
   title: Waarom Beauty Block Rosmalen?
   points:
     - text: |
-        Semi Permanente Make-up
-    - text: |
         Acne + bindweefsel specialist
     - text: |
         Voor mannen en vrouwen
