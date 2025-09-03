@@ -67,21 +67,8 @@ other:
         Therapie tot Hydro Dermabrasie, Skin Scrubber, Water Oxygen Spray,
         Ultrasound, Radio Frequent en een Koude Hamer. Samen de pérfecte
         combinatie voor een stralende gezonde huid.
-    - title: "Wake up without Make up : SPMU Semi Permanent Make up Ombré Powder
-        Brows"
-      price: 375
-      duration: 120
-      description: >+
-        Wakker worden met mooie wenkbrauwen! Vind jij het lastig om jou
-        wenkbrauwen dagelijks bij te werken? Dan is de Ombré Powder Brows voor
-        jou dé oplossing. Dit is een nieuwe techniek in semi permanente make up.
-        Het creëert een natuurlijke poederlook. Het voordeel van
-        deze  behandeling is dat het nagenoeg geschikt is voor iedereen en in
-        elke gewenste kleur + vorm. Het resultaat blijft gemiddeld 1 ½ tot 2
-        jaar mooi en goed zichtbaar. 
-
-    - title: Bindweefsel massage
-      price: 40
+    - title: Bindweefsel massage Gelaat (incl. masker)
+      price: 45
       duration: 30
       description: >
         Cosmetische bindweefsel massage is één van de populairste huid
@@ -99,34 +86,32 @@ hairremoval:
   - description: Bovenbenen
     price: 35
   - description: Oksels
-    price: 35
-  - description: Onderarmen (inclusief handen)
     price: 27.5
+  - description: Onderarmen (inclusief handen)
+    price: 30
   - description: Bikinilijn
     price: 30
   - description: Buik
-    price: 25
+    price: 27.5
   - description: Borst
     price: 30
-  - description: Rug
+  - description: Rug ( 30 of 50 afhankelijk van de haargroei)
     price: 30
   - description: Bovenlip incl. Kin
-    price: 14
-  - description: Kaaklijn
-    price: 13.5
+    price: 15
   - description: Kaaklijn + Wangen
-    price: 17.5
+    price: 20.5
 single:
   - description: Wenkbrauwen epileren (keuze uit; touw, pincet of wax)
-    price: 14
+    price: 15
   - description: Wenkbrauwen verven
-    price: 14
+    price: 15
   - description: Wimpers verven
-    price: 14
+    price: 15
   - description: Handpakking
     price: 7.5
   - description: Rugmassage (30 min)
-    price: 35
-  - description: Gelaat/decolleté en nek massage  (30 min)
-    price: 35
+    price: 40
+  - description: Ontspanningsmassage gelaat/decolleté en nek  (30 min)
+    price: 40
 ---
